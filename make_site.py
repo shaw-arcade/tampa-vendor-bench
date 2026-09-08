@@ -180,6 +180,6 @@ footer a{{color:var(--mute)}}
 </body>
 </html>
 """
-out = os.path.join(HERE, "site", "index.html")
+out = os.path.join(HERE, "docs", "index.html")
 open(out, "w").write(page)
 print("wrote", out, len(page), "bytes")
