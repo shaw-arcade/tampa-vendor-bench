@@ -1,0 +1,864 @@
+[
+{
+"i": 1,
+"n": "Florida Superior Painting LLC",
+"c": "Holiday",
+"r": "W",
+"p": [
+"8134400832",
+"7278091359"
+],
+"e": "info@floridasuperiorpainting.com",
+"u": "https://floridasuperiorpainting.com/",
+"ch": "email",
+"gr": 4.9,
+"gc": 143,
+"sb": "active",
+"f": false,
+"note": "Houzz 5.0 (9). Address 2508 Baywood Dr, Holiday 34690. Interior/exterior, cabinets, popcorn removal, drywall repair; foreman-supervised crews (so more than an owner-operator, likely 5-10 peo"
+},
+{
+"i": 2,
+"n": "A & E Painting & Coatings LLC",
+"c": "Trinity",
+"r": "W",
+"p": [
+"7274185737"
+],
+"e": "pinellaspainting@aol.com",
+"u": "https://aande-painting.com/",
+"ch": "email",
+"gr": 4.6,
+"gc": 57,
+"sb": "active",
+"f": false,
+"note": "President Mary Barriga; Alex named in reviews. Interior + exterior, Pasco/Pinellas/Hillsborough. 10-year written guarantee (exterior-oriented). RED FLAG: one Yelp review says they raised the"
+},
+{
+"i": 3,
+"n": "Lily's Painting Services, LLC",
+"c": "New Port Richey",
+"r": "W",
+"p": [
+"8139245565"
+],
+"e": "",
+"u": "https://www.lilyspaintingservices.com/",
+"ch": "facebook",
+"gr": 5.0,
+"gc": 156,
+"sb": "active",
+"f": false,
+"note": "6635 Main St, NPR 34653. Highest Google volume of any local shop at a perfect 5.0 (156). Interior/exterior, textured painting, drywall repair, handyman. Review: whole interior of a house don"
+},
+{
+"i": 4,
+"n": "AIC Painting",
+"c": "Land O' Lakes",
+"r": "C",
+"p": [
+"8139960149",
+"8139271375"
+],
+"e": "",
+"u": "https://www.aicpainting.com/Tampa-request-quote.php",
+"ch": "form",
+"gr": 4.9,
+"gc": 268,
+"sb": "none",
+"f": false,
+"note": "Veteran-owned, storefront on Land O Lakes Blvd. Largest review base of any local (4.9 on 268 Google). Reviews mention negotiating a deal with owner Jay. Lists apartment building painting und"
+},
+{
+"i": 5,
+"n": "Go With The Best Painters, LLC",
+"c": "Lutz",
+"r": "C",
+"p": [
+"9524526056"
+],
+"e": "gowiththebestpainters@gmail.com",
+"u": "https://app.acuityscheduling.com/schedule/c644c9c7",
+"ch": "email",
+"gr": 5.0,
+"gc": 44,
+"sb": "active",
+"f": false,
+"note": "One-man owner-operator (Oleg Vezikov). 5.0 across Google (44 on Birdeye, site claims 55), Thumbtack 5.0 on 12, BBB. Review: 'the price was reasonable' for interior. Thumbtack shows 3-room in"
+},
+{
+"i": 6,
+"n": "Top Tier Painting",
+"c": "New Port Richey",
+"r": "W",
+"p": [
+"7278086596"
+],
+"e": "Travis@toptierpaints.com",
+"u": "https://toptierpaints.com/",
+"ch": "email",
+"gr": 5.0,
+"gc": 14,
+"sb": "active",
+"f": false,
+"note": "Family shop run by Travis Haney (office: Kimberly Haney). Interior and exterior repaints, residential and commercial, Pasco + Hernando. Reviews highlight communication and schedule reliabili"
+},
+{
+"i": 7,
+"n": "Imperial Painting & Pressure Washing Contractors",
+"c": "Dade City",
+"r": "E",
+"p": [
+"8132353925"
+],
+"e": "",
+"u": "https://imperialpaints.us/",
+"ch": "form",
+"gr": 4.6,
+"gc": 64,
+"sb": "inactive",
+"f": false,
+"note": "12130 Smith Rd, family owned, Mon-Sat 7-7. Also does general renovation, so not interior-only. Google 4.6/64 via Birdeye; Yahoo Local shows 2.5/3 (small sample). Yelp files them under Genera"
+},
+{
+"i": 8,
+"n": "Five Star Painting of New Port Richey & Citrus Park",
+"c": "New Port Richey",
+"r": "W",
+"p": [
+"7272709533"
+],
+"e": "",
+"u": "https://www.fivestarpainting.com/schedule-estimate/",
+"ch": "form",
+"gr": 4.8,
+"gc": 374,
+"sb": "none",
+"f": true,
+"note": "Neighborly franchise, locally owned by Jeff Hawkins; 7620 Red Mill Cir, NPR 34653. Houzz 5.0 (7), HomeAdvisor/Angi 4.6, 600+ reviews across platforms. PRICE SIGNAL: '10% Off Any Job Over $1,"
+},
+{
+"i": 9,
+"n": "CK Painting Pro's FL, L.L.C.",
+"c": "Port Richey",
+"r": "W",
+"p": [
+"7274693029",
+"5189612848"
+],
+"e": "",
+"u": "https://www.facebook.com/ckpaintingfl/",
+"ch": "facebook",
+"gr": 4.9,
+"gc": 29,
+"sb": "active",
+"f": false,
+"note": "Two-man crew (David + partner), 7524 Handley Dr, Port Richey 34668. Reviews: 'meticulously thorough,' fixed another painter's botched interior in Hudson, 'affordable cost.' Works 7 days, ear"
+},
+{
+"i": 10,
+"n": "Above The Rest Painters",
+"c": "New Port Richey",
+"r": "W",
+"p": [
+"8138109703"
+],
+"e": "FredAFerrer@gmail.com",
+"u": "https://abovetherestpainters.com",
+"ch": "email",
+"gr": null,
+"gc": 0,
+"sb": "inactive",
+"f": false,
+"note": "Owner Fred Ferrer. Angi 5.0 and Houzz 5.0; Yelp 22 reviews (rating not retrievable). Address 7037 Lenape Cir, NPR 34653, second office in Riverview. Interior and exterior residential, Sherwi"
+},
+{
+"i": 11,
+"n": "M N Painting Services LLC",
+"c": "Wesley Chapel",
+"r": "C",
+"p": [
+"8137239708",
+"8134206538"
+],
+"e": "",
+"u": "https://mnpaintservices.com/",
+"ch": "form",
+"gr": 5.0,
+"gc": 25,
+"sb": "active",
+"f": false,
+"note": "Owner Marlon Noguera, 2 employees. Thumbtack 5.0 on 53 reviews, hired 77 times, Top Pro 2021-2022. Thumbtack profile: fair rates, no upfront payment required if customer supplies paint. Expl"
+},
+{
+"i": 12,
+"n": "Pro Kote Painting of Wesley Chapel LLC",
+"c": "Wesley Chapel / Zephyrhills",
+"r": "E",
+"p": [
+"8135285624",
+"8137288328"
+],
+"e": "Prokoteptg1@verizon.net",
+"u": "https://www.facebook.com/tvanchapaint/",
+"ch": "email",
+"gr": null,
+"gc": 0,
+"sb": "active",
+"f": false,
+"note": "Angi 5.0 with a 19-year repeat customer. Yelp reviews: whole-interior repaint done fast and neat, kitchen and mobile-home updates. Free estimates. Small family crew. No published pricing. St"
+},
+{
+"i": 13,
+"n": "Vene Painting Services Inc.",
+"c": "Land O' Lakes",
+"r": "C",
+"p": [
+"8132030817"
+],
+"e": "venepaintingservicesinc@gmail.com",
+"u": "https://venepaintingservices.com/contact-us/",
+"ch": "email",
+"gr": null,
+"gc": 0,
+"sb": "active",
+"f": false,
+"note": "2-person family shop (Melany Guevara, Leonardo Pena), never uses subs. Thumbtack 4.9 on 43 reviews, Top Pro 2021-2022; Facebook 100% recommend on 13. Thumbtack FAQ: 'Our prices can be negoti"
+},
+{
+"i": 14,
+"n": "Meticulous Painting, LLC",
+"c": "New Port Richey",
+"r": "W",
+"p": [
+"7272151361"
+],
+"e": "meticulous10857@gmail.com",
+"u": "https://meticulouspaintingllc.com",
+"ch": "email",
+"gr": null,
+"gc": 0,
+"sb": "active",
+"f": false,
+"note": "Owner Keith O'Loughlin; reviews name ~6 crew members, so a 2-10 person shop. Interior walls, doors, baseboards, staining. Sherwin-Williams default. Reviews praise prep and owner check-ins. H"
+},
+{
+"i": 15,
+"n": "Yates A Plus Painting LLC",
+"c": "Hudson",
+"r": "W",
+"p": [
+"8139000409"
+],
+"e": "yatespaintings@yahoo.com",
+"u": "https://www.activemember.com/yatesapluspainting/",
+"ch": "email",
+"gr": null,
+"gc": 0,
+"sb": "active",
+"f": false,
+"note": "Owner Donnie Yates III; Hudson 34667 (site says Port Richey). 'Quality work at affordable prices,' free estimates, hours 5:30am-9pm daily. Interior and exterior. Facebook page exists. RED FL"
+},
+{
+"i": 16,
+"n": "Painting By Ralph",
+"c": "Land O' Lakes",
+"r": "C",
+"p": [
+"8133801077"
+],
+"e": "ralphsansone6@gmail.com",
+"u": "",
+"ch": "email",
+"gr": null,
+"gc": 0,
+"sb": "inactive",
+"f": false,
+"note": "Owner-operator Ralph Sansone. Serves Land O Lakes, Wesley Chapel, Lutz, Odessa. Reviews across Yelp, Nextdoor, BestProsInTown (93 reviews there) consistently say fast, clean, reasonable pric"
+},
+{
+"i": 17,
+"n": "Lux Painting Pros LLC",
+"c": "New Port Richey",
+"r": "W",
+"p": [
+"7276193515"
+],
+"e": "",
+"u": "http://www.luxpaintingpros.com",
+"ch": "facebook",
+"gr": 5.0,
+"gc": 19,
+"sb": "inactive",
+"f": false,
+"note": "Interior-painting and cabinet-refinishing specialist, 6234 Grand Blvd Ste 201 / 5117 Hillside Dr, NPR 34652. Angi + HomeAdvisor profiles. Reviews cite 'main areas of the house' and full inte"
+},
+{
+"i": 18,
+"n": "Briggs Best Painting LLC",
+"c": "Zephyrhills",
+"r": "E",
+"p": [
+"8137823272"
+],
+"e": "",
+"u": "",
+"ch": "phone",
+"gr": 5.0,
+"gc": 15,
+"sb": "active",
+"f": false,
+"note": "Owner-operator Richard L Briggs, 7149 Andre Dr. Small shop, interior + exterior + pressure washing, Sherwin-Williams. Google reviews cite 'prices always very reasonable' and good arrival-tim"
+},
+{
+"i": 19,
+"n": "Chad Jackson Painting, Inc.",
+"c": "Port Richey",
+"r": "W",
+"p": [
+"7279675844"
+],
+"e": "",
+"u": "https://www.chadjacksonpainting.com/contact-us/",
+"ch": "form",
+"gr": null,
+"gc": 0,
+"sb": "active",
+"f": false,
+"note": "Angi 5.0. Small crew (reviews name 5 crew members). Interiors + Residential listed as core services; also HOA and property-maintenance work, which suggests repaint/turnover experience. Nextd"
+},
+{
+"i": 20,
+"n": "Apex Painting & Coating",
+"c": "Holiday",
+"r": "W",
+"p": [
+"7279442323",
+"7275147375"
+],
+"e": "apexpainting.tom@gmail.com",
+"u": "https://www.apexpaintingandcoating.com/",
+"ch": "email",
+"gr": null,
+"gc": 0,
+"sb": "inactive",
+"f": false,
+"note": "Two-partner shop (Tom and Chris). HomeAdvisor 4.8. Address 5746 Bacardi Ct, Holiday 34690. Site says 'any job, big or small.' Interior, cabinets, popcorn removal. Serves Holiday, Trinity, Po"
+},
+{
+"i": 21,
+"n": "Lou Phillips Painting, Inc.",
+"c": "Odessa",
+"r": "W",
+"p": [
+"8132991979",
+"8133800485"
+],
+"e": "",
+"u": "https://louphillipspainting.com/",
+"ch": "form",
+"gr": null,
+"gc": 0,
+"sb": "active",
+"f": false,
+"note": "Owner John L. 'Lou' Phillips, 18206 Keystone Grove Blvd, Odessa 33556 (BBB mailing address Tampa). PRICE SIGNALS: 'No Deposits Required,' free on-site estimates with itemized product list an"
+},
+{
+"i": 22,
+"n": "Polson Painting",
+"c": "Land O' Lakes",
+"r": "C",
+"p": [
+"8132445270"
+],
+"e": "service@polsonpainting.com",
+"u": "https://polsonpainting.com/contact/",
+"ch": "email",
+"gr": null,
+"gc": 0,
+"sb": "inactive",
+"f": false,
+"note": "Family-run (Don and Erin Polson), 30+ yrs, Pasco and Hillsborough. Nextdoor reviews note single-room jobs handled affordably and 'reasonably priced'. Publishes license numbers, which is rare"
+},
+{
+"i": 23,
+"n": "Zumo Painting & Renovations LLC",
+"c": "Wesley Chapel",
+"r": "C",
+"p": [
+"7277431438"
+],
+"e": "info@zumopainting.com",
+"u": "https://www.zumopainting.com/",
+"ch": "email",
+"gr": null,
+"gc": 0,
+"sb": "none",
+"f": false,
+"note": "5 employees, owner Carlos Blanco with brother Luis. Thumbtack 4.8 on 81 reviews, Top Pro 2022-2025. Thumbtack note: not hourly, requires a deposit to hold dates. Does cabinets, drywall, ligh"
+},
+{
+"i": 24,
+"n": "ODB Contractors Inc.",
+"c": "Wesley Chapel",
+"r": "C",
+"p": [
+"8137399109",
+"8133175784"
+],
+"e": "info@odbcontractorsinc.com",
+"u": "https://www.odbcontractorsinc.com/book-online;",
+"ch": "email",
+"gr": null,
+"gc": 0,
+"sb": "active",
+"f": false,
+"note": "Painter plus handyman. The only vendor in this set that explicitly markets rental turnover, make-ready, punch lists and investor portfolio maintenance, with estimates within 24 hours and sam"
+},
+{
+"i": 25,
+"n": "Andy Norris Painting, Inc.",
+"c": "Dade City",
+"r": "E",
+"p": [
+"8137834705",
+"8137834704"
+],
+"e": "andy@andynorrispainting.com",
+"u": "http://www.andynorrispainting.com/",
+"ch": "email",
+"gr": null,
+"gc": 0,
+"sb": "active",
+"f": false,
+"note": "HomeAdvisor 5.0, Houzz 5.0, Yellow Pages 5 stars. Hand-brush and roll only (no spray). One reviewer says Andy has painted multiple properties for them for 20+ years, which reads like landlor"
+},
+{
+"i": 26,
+"n": "Paint Plus of Tampa, LLC",
+"c": "Wesley Chapel (33544)",
+"r": "E",
+"p": [
+"8138026689"
+],
+"e": "",
+"u": "",
+"ch": "phone",
+"gr": 5.0,
+"gc": 12,
+"sb": "active",
+"f": false,
+"note": "HomeAdvisor and Angi 4.9. Family-owned, residential and commercial, power washing and waterproofing too. Reviews: clean, professional, repeat customers for big projects. Yelp page exists (55"
+},
+{
+"i": 27,
+"n": "Franklyn Painting LLC",
+"c": "Zephyrhills",
+"r": "E",
+"p": [
+"8136022628",
+"6126703951"
+],
+"e": "franklynpainting@gmail.com",
+"u": "https://www.franklynpainting.com/#lead-form",
+"ch": "email",
+"gr": null,
+"gc": 0,
+"sb": "active",
+"f": false,
+"note": "Owners Destiny and Nestor, female-led family business. Interior painting, cabinet refinishing, low-VOC options. No review counts retrievable (Nextdoor shows a 3.88 figure of unclear scale). "
+},
+{
+"i": 28,
+"n": "Prestige Pro Painters LLC",
+"c": "Zephyrhills (33541)",
+"r": "E",
+"p": [
+"3524578211"
+],
+"e": "",
+"u": "https://www.facebook.com/Prestigepropaintersllc/",
+"ch": "facebook",
+"gr": 5.0,
+"gc": 3,
+"sb": "active",
+"f": false,
+"note": "36706 Thompson Ln. Reviews: 'honest priced', quick and precise, commercial and residential. Only 3 Google reviews. Insurance not stated on pages found. Not found on Sunbiz mirror sites (D&B "
+},
+{
+"i": 29,
+"n": "Made Painting Tampa LLC",
+"c": "New Port Richey",
+"r": "W",
+"p": [
+"8135913111"
+],
+"e": "",
+"u": "https://www.madepaintingtampa.com/contact/",
+"ch": "form",
+"gr": null,
+"gc": 0,
+"sb": "active",
+"f": false,
+"note": "Owner-operator Nate (Nathan). The only local site that explicitly markets to 'property managers' and 'rental or multi-unit property owners.' Interior/exterior, pressure washing, paver sealin"
+},
+{
+"i": 30,
+"n": "Smoothlines Painting LLC",
+"c": "Wesley Chapel (33543, Zephyrhills-side)",
+"r": "E",
+"p": [
+"8135062235"
+],
+"e": "smoothlines813@gmail.com",
+"u": "https://smoothlinespainters.com/",
+"ch": "email",
+"gr": null,
+"gc": 0,
+"sb": "active",
+"f": false,
+"note": "Owner Israel Flores. Facebook 10 reviews, 100% recommend. Nextdoor says they serve homeowners and real estate professionals. Interior/exterior repaints and cabinet refacing, Sherwin-Williams"
+},
+{
+"i": 31,
+"n": "Cory Wayland Painting",
+"c": "New Port Richey",
+"r": "W",
+"p": [
+"7274609509"
+],
+"e": "",
+"u": "",
+"ch": "phone",
+"gr": null,
+"gc": 0,
+"sb": "active",
+"f": false,
+"note": "Owner-operator: Cory Wayland personally does the work, no subcontractors. Interior/exterior, popcorn removal, pressure washing. Nextdoor neighbors call him 'reliable, reasonable and stands b"
+},
+{
+"i": 32,
+"n": "DLF Professional Painting Inc.",
+"c": "Wesley Chapel",
+"r": "C",
+"p": [
+"8139499073"
+],
+"e": "",
+"u": "",
+"ch": "phone",
+"gr": null,
+"gc": 0,
+"sb": "inactive",
+"f": false,
+"note": "Long-running family shop (Wesley Chapel, Land O Lakes, Lutz, New Tampa). RED FLAG: former website domain now hosts an unrelated site, so confirm they are still operating before relying on th"
+},
+{
+"i": 33,
+"n": "Revive Painting LLC",
+"c": "Wesley Chapel",
+"r": "C",
+"p": [
+"8135000514"
+],
+"e": "",
+"u": "",
+"ch": "phone",
+"gr": null,
+"gc": 0,
+"sb": "active",
+"f": false,
+"note": "Owner Andrew. PUBLISHED PRICING: interior painting from $300 per standard bedroom, drywall repair from $50 per hole; 10% senior and 15% veteran discounts. Nextdoor praise for reasonable pric"
+},
+{
+"i": 34,
+"n": "Bob White Painting",
+"c": "Zephyrhills",
+"r": "E",
+"p": [
+"8137823521"
+],
+"e": "",
+"u": "",
+"ch": "phone",
+"gr": null,
+"gc": 0,
+"sb": "none",
+"f": false,
+"note": "Second-generation Zephyrhills painter. Search snippet cites an aggregate 4.7 stars / 44 reviews across platforms (source of that aggregate not verified). Nextdoor: free estimates, reasonable"
+},
+{
+"i": 35,
+"n": "Ed Staib Painting",
+"c": "New Port Richey",
+"r": "W",
+"p": [
+"7277763201"
+],
+"e": "",
+"u": "https://www.edstaibpainting.com/contact",
+"ch": "form",
+"gr": null,
+"gc": 0,
+"sb": "none",
+"f": false,
+"note": "Angi 5.0. True owner-operators: Ed (35+ yrs painting) and Amy do every job themselves, 'no rotating crews or subcontractors.' Site explicitly welcomes single-room jobs. Navy-veteran and woma"
+},
+{
+"i": 36,
+"n": "Refresh Painting LLC",
+"c": "Wesley Chapel",
+"r": "C",
+"p": [
+"3527214330"
+],
+"e": "",
+"u": "https://www.refreshpaintingfl.com/",
+"ch": "form",
+"gr": null,
+"gc": 0,
+"sb": "inactive",
+"f": false,
+"note": "Owner Rafael Allegue Navarro. Instagram bio calls them exterior painting and stucco specialists, though site lists interior painting. Yelp reviewer: fit small jobs into schedule easily, resp"
+},
+{
+"i": 37,
+"n": "JMC Painting and Beyond LLC",
+"c": "Wesley Chapel",
+"r": "C",
+"p": [
+"8139938489",
+"8133609354"
+],
+"e": "",
+"u": "",
+"ch": "facebook",
+"gr": null,
+"gc": 0,
+"sb": "active",
+"f": false,
+"note": "4-person crew, Thumbtack 5.0 on 17 reviews, Top Pro 2021, hired 7 times there. Interior repaint, drywall repair, popcorn removal. Accepts cash, check, Venmo, Zelle. Two different phone numbe"
+},
+{
+"i": 38,
+"n": "Partners in Painting LLC",
+"c": "Zephyrhills",
+"r": "E",
+"p": [
+"8139288131"
+],
+"e": "",
+"u": "https://www.facebook.com/partnersinpaintingllc/",
+"ch": "facebook",
+"gr": null,
+"gc": 0,
+"sb": "inactive",
+"f": false,
+"note": "Interior/exterior, residential/commercial. Explicitly lists Zephyrhills, Dade City, Wesley Chapel, Land O Lakes. Yelp page exists but rating not retrievable. Not found on Sunbiz mirror sites"
+},
+{
+"i": 39,
+"n": "Paint EZ of North Tampa",
+"c": "Spring Hill (Hernando) office; dedicated Zephyrhills service page",
+"r": "E",
+"p": [
+"3526069077"
+],
+"e": "northtampa@paintez.com",
+"u": "https://paintez.com/north-tampa/zephyrhills/",
+"ch": "email",
+"gr": null,
+"gc": 0,
+"sb": "none",
+"f": true,
+"note": "FRANCHISE (Paint EZ: 50+ franchises nationwide), price reference only. Owners Thomas and Jenn Reilly. Explicitly markets to property management groups and multi-property owners. 2/5/7-year w"
+},
+{
+"i": 40,
+"n": "Johnson's Painting Services",
+"c": "Hudson",
+"r": "W",
+"p": [
+"4135307391"
+],
+"e": "",
+"u": "",
+"ch": "phone",
+"gr": null,
+"gc": 0,
+"sb": "inactive",
+"f": false,
+"note": "Owner-operator Ken Johnson, 8249 Danbury Ln, Hudson 34667. Nextdoor: 4 verified recommendations. PRICE SIGNAL: reviewer says he 'didn't require a deposit which most did,' supplied the paint,"
+},
+{
+"i": 41,
+"n": "Frank Manzo And Sons Painting",
+"c": "Hudson",
+"r": "W",
+"p": [
+"7279671905"
+],
+"e": "",
+"u": "",
+"ch": "phone",
+"gr": null,
+"gc": 0,
+"sb": "none",
+"f": false,
+"note": "Family owner-operator, 8152 Millwood Dr, Hudson 34667. Nextdoor recommendations; 'Mike' does the work, 'painted two of my houses inside and out,' rooms and hallways. Thin online footprint; p"
+},
+{
+"i": 42,
+"n": "P & P Paint",
+"c": "Land O' Lakes",
+"r": "C",
+"p": [
+"8134215262"
+],
+"e": "",
+"u": "",
+"ch": "phone",
+"gr": null,
+"gc": 0,
+"sb": "active",
+"f": false,
+"note": "RED FLAG: no reviews found anywhere. Very new LLC. Included only because it is a Land O Lakes based interior painter with a Yelp listing and active Sunbiz record. Treat as a backup bid, ask "
+},
+{
+"i": 43,
+"n": "E Pro Painting Inc.",
+"c": "Wesley Chapel",
+"r": "E",
+"p": [
+"8138974407"
+],
+"e": "",
+"u": "",
+"ch": "phone",
+"gr": null,
+"gc": 0,
+"sb": "active",
+"f": false,
+"note": "President Edwin Esquivel; three named staff, so a small shop. Residential, commercial and industrial painting plus waterproofing, epoxy floors, pressure washing. BBB reviews positive but no "
+},
+{
+"i": 44,
+"n": "Zambrano Painting Services LLC",
+"c": "Lutz",
+"r": "C",
+"p": [
+"8135278642"
+],
+"e": "",
+"u": "https://www.activemember.com/zambranopaintingservices",
+"ch": "phone",
+"gr": null,
+"gc": 0,
+"sb": "active",
+"f": false,
+"note": "Owner Luis Zambrano. Residential and commercial painting with minor drywall repair. Angi lists 'small projects painting'. RED FLAG: no reviews on Angi or BusinessYab yet; BBB accredited but "
+},
+{
+"i": 45,
+"n": "Daniel's Professional Painting & Pressure Washing",
+"c": "Dade City",
+"r": "C",
+"p": [
+"3524242455",
+"3522616710"
+],
+"e": "",
+"u": "",
+"ch": "phone",
+"gr": null,
+"gc": 0,
+"sb": "none",
+"f": false,
+"note": "HomeAdvisor 4.7 on 29 verified reviews, 93% recommend; interior painting for multiple rooms plus drywall repair and textures. Included specifically for the Trilby / north Pasco properties. W"
+},
+{
+"i": 46,
+"n": "The Real Deal Painting",
+"c": "Zephyrhills (33542)",
+"r": "E",
+"p": [
+"7274704043"
+],
+"e": "",
+"u": "",
+"ch": "phone",
+"gr": null,
+"gc": 0,
+"sb": "inactive",
+"f": false,
+"note": "38018 Cross Dr. Interior and exterior, free estimates. Listed on HomeAdvisor, Yelp and Yahoo Local but no rating retrievable. Yahoo listing says 'open 24 hours' (listing quality flag). Do no"
+},
+{
+"i": 47,
+"n": "Pro-Way Professional Painting and Pressure Washing LLC",
+"c": "Zephyrhills",
+"r": "E",
+"p": [
+"8136026899"
+],
+"e": "",
+"u": "",
+"ch": "phone",
+"gr": null,
+"gc": 0,
+"sb": "inactive",
+"f": false,
+"note": "6830 Wire Rd. Nextdoor-verified house painter (2017, 2021) offering interior work. Facebook page exists. No ratings retrievable; insurance not stated. Thin data."
+},
+{
+"i": 48,
+"n": "Sawyer and Sons Painting Professionals",
+"c": "San Antonio",
+"r": "E",
+"p": [
+"3528071848"
+],
+"e": "",
+"u": "",
+"ch": "phone",
+"gr": null,
+"gc": 0,
+"sb": "none",
+"f": false,
+"note": "Family owned, advertises 'extremely competitive pricing'. On Yelp and Angi; ratings not retrievable. Insurance not stated. No Sunbiz entity found. Closest shop to San Antonio / St. Leo."
+},
+{
+"i": 49,
+"n": "Gueritas Painting LLC",
+"c": "Dade City",
+"r": "E",
+"p": [
+"8137758602"
+],
+"e": "",
+"u": "",
+"ch": "phone",
+"gr": null,
+"gc": 0,
+"sb": "active",
+"f": false,
+"note": "Residential and commercial, interior to exterior. Addresses vary by listing (37505 Layton Rd on Yelp, 37305 Lock St / 37301 Moore Dr elsewhere). RED FLAG: no public reviews found on Manta; Y"
+},
+{
+"i": 50,
+"n": "Twocanpaint",
+"c": "Wesley Chapel",
+"r": "C",
+"p": [
+"8137314040"
+],
+"e": "",
+"u": "http://twocanpaint.com/",
+"ch": "phone",
+"gr": null,
+"gc": 0,
+"sb": "active",
+"f": false,
+"note": "Father-son owner-operator (Lee and Jonathan/Thomas). Birdeye 5.0 on 4. Reviews praise holding to the quote even when more paint was needed. One complaint about tape and debris left in landsc"
+}
+]

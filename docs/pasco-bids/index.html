@@ -1,0 +1,1398 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Fifty interior painters in Pasco County, Florida, with the job spec, market price bands, and a place to log each bid.">
+<style>
+  html{color-scheme:light}
+  body{margin:0;font:14px/1.5 system-ui,-apple-system,Segoe UI,sans-serif}
+  img{max-width:100%}
+  [hidden]{display:none!important}
+</style>
+<title>Pasco Paint Bids</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+:root{
+  --paper:#EDF0F1; --card:#F7F9F9; --ink:#111E27; --ink2:#33454F;
+  --mute:#61757F; --line:#CBD5D8; --line2:#DCE3E5;
+  --accent:#0F6076; --accent-soft:#DCEAEE;
+  --ok:#286B4C; --ok-soft:#DBEBE1;
+  --warn:#96570D; --warn-soft:#F3E7D5;
+  --flag:#8E3B2F;
+  --band-low:#8FBFA8; --band-mid:#6FA8BC; --band-high:#C9A272;
+  --shadow:0 1px 2px rgba(17,30,39,.07);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --paper:#0E171D; --card:#152229; --ink:#E6EDEF; --ink2:#BCCBD1;
+  --mute:#8298A1; --line:#2A3B44; --line2:#213038;
+  --accent:#6BC0D8; --accent-soft:#12313B;
+  --ok:#68C79A; --ok-soft:#133325;
+  --warn:#E0A65C; --warn-soft:#33260F;
+  --flag:#E08B7B;
+  --band-low:#3E7460; --band-mid:#2F6377; --band-high:#7A5F35;
+  --shadow:0 1px 2px rgba(0,0,0,.4);
+}}
+:root[data-theme="dark"]{
+  --paper:#0E171D; --card:#152229; --ink:#E6EDEF; --ink2:#BCCBD1;
+  --mute:#8298A1; --line:#2A3B44; --line2:#213038;
+  --accent:#6BC0D8; --accent-soft:#12313B;
+  --ok:#68C79A; --ok-soft:#133325;
+  --warn:#E0A65C; --warn-soft:#33260F;
+  --flag:#E08B7B;
+  --band-low:#3E7460; --band-mid:#2F6377; --band-high:#7A5F35;
+  --shadow:0 1px 2px rgba(0,0,0,.4);
+}
+*{box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);
+  font-family:"IBM Plex Sans",system-ui,-apple-system,Segoe UI,sans-serif;
+  font-size:14px;line-height:1.5;margin:0;padding:0 16px 72px;
+  -webkit-font-smoothing:antialiased}
+.wrap{max-width:1120px;margin:0 auto}
+h1,h2,h3,.cond{font-family:"IBM Plex Sans Condensed","IBM Plex Sans",sans-serif}
+.mono{font-family:"IBM Plex Mono",ui-monospace,Menlo,monospace;font-variant-numeric:tabular-nums}
+.lab{font-family:"IBM Plex Sans Condensed",sans-serif;font-size:10.5px;font-weight:600;
+  letter-spacing:.1em;text-transform:uppercase;color:var(--mute)}
+
+/* header */
+header{padding:28px 0 18px;border-bottom:2px solid var(--ink)}
+h1{margin:0;font-size:30px;font-weight:700;letter-spacing:-.015em;line-height:1.05}
+.sub{margin:6px 0 0;color:var(--ink2);max-width:62ch}
+.stamp{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:14px}
+.stamp div{display:flex;gap:7px;align-items:baseline}
+
+/* spec sheet */
+.spec{border:1px solid var(--line);border-top:none;background:var(--card);
+  display:grid;grid-template-columns:repeat(4,1fr)}
+.spec .f{padding:11px 14px;border-right:1px solid var(--line2);border-bottom:1px solid var(--line2)}
+.spec .f:nth-child(4n){border-right:none}
+.spec .f:nth-last-child(-n+4){border-bottom:none}
+@media(max-width:640px){.spec{grid-template-columns:repeat(2,1fr)}.spec .f:nth-child(4n){border-right:1px solid var(--line2)}.spec .f:nth-child(2n){border-right:none}}
+.spec .v{font-weight:600;margin-top:3px;font-size:13.5px;line-height:1.35}
+.spec .v.hi{color:var(--accent)}
+
+/* benchmark */
+.bench{margin:26px 0 8px}
+.scale{position:relative;height:62px;margin-top:12px}
+.bands{position:absolute;inset:0 0 26px 0;display:flex;border:1px solid var(--line);border-radius:2px;overflow:hidden}
+.band{position:relative}
+.band span{position:absolute;left:7px;top:5px;font-size:10.5px;font-weight:600;
+  font-family:"IBM Plex Sans Condensed",sans-serif;letter-spacing:.05em;
+  text-transform:uppercase;color:#0E1A20;opacity:.82}
+.ticks{position:absolute;left:0;right:0;bottom:0;height:22px}
+.tick{position:absolute;transform:translateX(-50%);font-size:10.5px;color:var(--mute);white-space:nowrap}
+.tick::before{content:"";position:absolute;left:50%;top:-6px;width:1px;height:5px;background:var(--line)}
+.pin{position:absolute;top:-2px;transform:translateX(-50%);width:2px;height:36px;background:var(--ink);z-index:3}
+.pin b{position:absolute;top:-17px;left:50%;transform:translateX(-50%);
+  background:var(--ink);color:var(--paper);font-size:10.5px;padding:1px 5px;border-radius:2px;
+  font-family:"IBM Plex Mono",monospace;white-space:nowrap}
+
+/* toolbar */
+.bar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;
+  margin:22px 0 10px;padding-bottom:10px;border-bottom:1px solid var(--line)}
+.chip{font:inherit;font-size:12.5px;background:transparent;color:var(--ink2);
+  border:1px solid var(--line);border-radius:999px;padding:4px 11px;cursor:pointer}
+.chip:hover{border-color:var(--accent);color:var(--accent)}
+.chip[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:var(--paper)}
+.chip .n{opacity:.62;margin-left:4px;font-size:11px}
+.grow{flex:1 1 90px}
+input[type=search]{font:inherit;font-size:13px;background:var(--card);color:var(--ink);
+  border:1px solid var(--line);border-radius:3px;padding:5px 10px;width:100%;max-width:210px}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+/* rows */
+.rows{border-top:1px solid var(--line2)}
+.row{display:grid;grid-template-columns:26px minmax(0,3.4fr) 78px 92px 84px auto;
+  gap:12px;align-items:center;padding:9px 4px;border-bottom:1px solid var(--line2)}
+.row:hover{background:var(--card)}
+.row.done{background:var(--ok-soft)}
+.rank{font-size:11.5px;color:var(--mute);text-align:right}
+.nm{font-weight:600;font-size:14px;line-height:1.25;overflow-wrap:anywhere}
+.meta{font-size:11.5px;color:var(--mute);margin-top:2px}
+.rg{font-size:11px;color:var(--ink2)}
+.rev{font-size:12px;color:var(--ink2)}
+.rev .no{color:var(--mute)}
+.acts{display:flex;gap:6px;justify-self:end;flex-wrap:wrap;justify-content:flex-end}
+.btn{font:inherit;font-size:12px;text-decoration:none;border:1px solid var(--line);
+  background:var(--card);color:var(--ink2);border-radius:3px;padding:3px 9px;cursor:pointer;white-space:nowrap}
+.btn:hover{border-color:var(--accent);color:var(--accent)}
+.btn.pri{background:var(--accent);border-color:var(--accent);color:var(--card)}
+.btn.pri:hover{opacity:.88;color:var(--card)}
+.tag{font-family:"IBM Plex Sans Condensed",sans-serif;font-size:10px;font-weight:600;
+  letter-spacing:.06em;text-transform:uppercase;padding:1px 5px;border-radius:2px;white-space:nowrap}
+.t-act{background:var(--ok-soft);color:var(--ok)}
+.t-in{background:var(--warn-soft);color:var(--warn)}
+.t-no{background:var(--line2);color:var(--mute)}
+.t-fr{background:transparent;color:var(--mute);border:1px solid var(--line)}
+.quoted{font-family:"IBM Plex Mono",monospace;font-weight:600;color:var(--ok);font-size:13px}
+
+/* panel */
+dialog{border:1px solid var(--line);border-radius:4px;background:var(--card);color:var(--ink);
+  padding:0;max-width:440px;width:calc(100% - 32px);box-shadow:0 12px 40px rgba(17,30,39,.22)}
+dialog::backdrop{background:rgba(10,20,26,.5)}
+.dh{padding:15px 18px;border-bottom:1px solid var(--line2)}
+.db{padding:15px 18px;display:grid;gap:11px}
+.fld{display:grid;gap:4px}
+.fld input,.fld textarea,.fld select{font:inherit;font-size:13.5px;background:var(--paper);
+  color:var(--ink);border:1px solid var(--line);border-radius:3px;padding:6px 9px;width:100%}
+.fld textarea{min-height:56px;resize:vertical}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:11px}
+.df{padding:12px 18px;border-top:1px solid var(--line2);display:flex;gap:8px;justify-content:flex-end}
+
+/* request text */
+.req{margin-top:34px;border:1px solid var(--line);border-radius:4px;background:var(--card)}
+.req .rh{padding:13px 16px;border-bottom:1px solid var(--line2);display:flex;
+  justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+pre.txt{margin:0;padding:16px;font-family:"IBM Plex Mono",monospace;font-size:12.5px;
+  line-height:1.65;white-space:pre-wrap;overflow-x:auto;color:var(--ink2)}
+.note{font-size:12.5px;color:var(--mute);margin-top:10px;max-width:70ch}
+footer{margin-top:34px;padding-top:14px;border-top:1px solid var(--line);
+  font-size:12px;color:var(--mute);display:flex;gap:16px;flex-wrap:wrap;justify-content:space-between}
+@media (max-width:720px){
+  .row{grid-template-columns:22px minmax(0,1fr) auto;row-gap:6px}
+  .rg,.rev{display:none}
+  .acts{grid-column:2/4}
+  h1{font-size:24px}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+
+</head>
+<body>
+<div class="wrap">
+<header>
+  <h1>Pasco Paint Bids</h1>
+  <p class="sub">Fifty interior painters in Pasco County, sourced and checked against Florida corporate records. Nobody has been contacted. Log each bid as it lands so the spread is visible in one place.</p>
+  <div class="stamp">
+    <div><span class="lab">Sourced</span><span class="mono">2026-09-09</span></div>
+    <div><span class="lab">Vendors</span><span class="mono">50 of 56 found</span></div>
+    <div><span class="lab">Contacted</span><span class="mono">0</span></div>
+    <div><span class="lab">Bids in</span><span class="mono" id="cnt">0</span></div>
+  </div>
+</header>
+
+<section class="spec" aria-label="Job specification">
+  <div class="f"><div class="lab">House</div><div class="v">1,200 sq ft, 3 bed / 1 bath, living, kitchen</div></div>
+  <div class="f"><div class="lab">Ceilings</div><div class="v">8 ft</div></div>
+  <div class="f"><div class="lab">Condition</div><div class="v">Vacant, lockbox. Same color already, minor stains, no smoke</div></div>
+  <div class="f"><div class="lab">Finish</div><div class="v hi">One color, semi-gloss throughout</div></div>
+  <div class="f"><div class="lab">In scope</div><div class="v">Walls, ceilings, trim, doors, baseboards</div></div>
+  <div class="f"><div class="lab">Coats</div><div class="v">2 coats, plus a 1-coat alternate</div></div>
+  <div class="f"><div class="lab">Take-off</div><div class="v mono">2,600 sf wall / 1,200 sf ceiling / 8 doors / 250 lf base</div></div>
+  <div class="f"><div class="lab">Repeat work</div><div class="v">Yes, mentioned in the request</div></div>
+</section>
+
+<section class="bench">
+  <div class="lab">What this job should cost, labor and paint</div>
+  <div class="scale">
+    <div class="bands" id="bands"></div>
+    <div class="ticks" id="ticks"></div>
+  </div>
+  <p class="note">Bands are Tampa Bay market rates as of September 2026: a small crew at the low end, an insured company on property-manager terms in the middle, a branded retail painter at the top. Anything past $6,500 for this scope is outside every range found. Bids you log appear as pins.</p>
+</section>
+
+<div class="bar">
+  <button class="chip" data-f="all" aria-pressed="true">All<span class="n" id="n-all"></span></button>
+  <button class="chip" data-f="W" aria-pressed="false">West<span class="n" id="n-W"></span></button>
+  <button class="chip" data-f="C" aria-pressed="false">Central<span class="n" id="n-C"></span></button>
+  <button class="chip" data-f="E" aria-pressed="false">East<span class="n" id="n-E"></span></button>
+  <span style="width:10px"></span>
+  <button class="chip" data-f="email" aria-pressed="false">Emailable<span class="n" id="n-email"></span></button>
+  <button class="chip" data-f="phone" aria-pressed="false">Call only<span class="n" id="n-phone"></span></button>
+  <button class="chip" data-f="quoted" aria-pressed="false">Quoted<span class="n" id="n-quoted"></span></button>
+  <span class="grow"></span>
+  <input type="search" id="q" placeholder="Find a painter" aria-label="Search painters">
+</div>
+
+<div class="rows" id="rows"></div>
+
+<section class="req">
+  <div class="rh">
+    <div><div class="lab">The request, ready to paste</div>
+    <div style="font-size:12.5px;color:var(--mute);margin-top:2px">Same wording to every painter, so the bids compare.</div></div>
+    <button class="btn pri" id="copy">Copy</button>
+  </div>
+  <pre class="txt" id="rfq"></pre>
+</section>
+
+<p class="note">Florida does not license painters, so there is no state license to look up here, unlike plumbers or electricians. What stands in for it: an active Florida entity, a county business tax receipt, and workers' compensation. Painting counts as construction in Florida, so one employee triggers coverage. Ask for the certificate before anyone starts, not after.</p>
+
+<footer>
+  <span>Sourced by web research only. No painter has been contacted. Bids you log stay in this browser on this device.</span>
+  <span class="mono">Pasco County, FL</span>
+</footer>
+</div>
+
+<dialog id="dlg">
+  <form method="dialog">
+  <div class="dh"><div class="lab">Log a bid</div><div id="dnm" style="font-weight:600;font-size:16px;margin-top:2px"></div></div>
+  <div class="db">
+    <div class="two">
+      <div class="fld"><label class="lab" for="f-total">Total, 2 coats</label><input id="f-total" inputmode="decimal" placeholder="3200"></div>
+      <div class="fld"><label class="lab" for="f-one">Total, 1 coat</label><input id="f-one" inputmode="decimal" placeholder="2400"></div>
+    </div>
+    <div class="two">
+      <div class="fld"><label class="lab" for="f-labor">Labor only</label><input id="f-labor" inputmode="decimal" placeholder="1900"></div>
+      <div class="fld"><label class="lab" for="f-days">Days on site</label><input id="f-days" placeholder="3"></div>
+    </div>
+    <div class="fld"><label class="lab" for="f-prod">Paint they would use</label><input id="f-prod" placeholder="SW ProMar 200 semi-gloss"></div>
+    <div class="fld"><label class="lab" for="f-st">Where it stands</label>
+      <select id="f-st">
+        <option value="quoted">Quoted</option>
+        <option value="waiting">Asked, waiting</option>
+        <option value="walk">Wants to walk the house</option>
+        <option value="pass">Passed or no answer</option>
+      </select></div>
+    <div class="fld"><label class="lab" for="f-note">Notes</label><textarea id="f-note" placeholder="Insurance, repeat rate, anything they said"></textarea></div>
+  </div>
+  <div class="df">
+    <button class="btn" value="cancel">Cancel</button>
+    <button class="btn" id="clear" value="clear">Clear</button>
+    <button class="btn pri" id="save" value="save">Save bid</button>
+  </div>
+  </form>
+</dialog>
+
+<script id="data" type="application/json">[
+{
+"i": 1,
+"n": "Florida Superior Painting LLC",
+"c": "Holiday",
+"r": "W",
+"p": [
+"8134400832",
+"7278091359"
+],
+"e": "info@floridasuperiorpainting.com",
+"u": "https://floridasuperiorpainting.com/",
+"ch": "email",
+"gr": 4.9,
+"gc": 143,
+"sb": "active",
+"f": false,
+"note": "Houzz 5.0 (9). Address 2508 Baywood Dr, Holiday 34690. Interior/exterior, cabinets, popcorn removal, drywall repair; foreman-supervised crews (so more than an owner-operator, likely 5-10 peo"
+},
+{
+"i": 2,
+"n": "A & E Painting & Coatings LLC",
+"c": "Trinity",
+"r": "W",
+"p": [
+"7274185737"
+],
+"e": "pinellaspainting@aol.com",
+"u": "https://aande-painting.com/",
+"ch": "email",
+"gr": 4.6,
+"gc": 57,
+"sb": "active",
+"f": false,
+"note": "President Mary Barriga; Alex named in reviews. Interior + exterior, Pasco/Pinellas/Hillsborough. 10-year written guarantee (exterior-oriented). RED FLAG: one Yelp review says they raised the"
+},
+{
+"i": 3,
+"n": "Lily's Painting Services, LLC",
+"c": "New Port Richey",
+"r": "W",
+"p": [
+"8139245565"
+],
+"e": "",
+"u": "https://www.lilyspaintingservices.com/",
+"ch": "facebook",
+"gr": 5.0,
+"gc": 156,
+"sb": "active",
+"f": false,
+"note": "6635 Main St, NPR 34653. Highest Google volume of any local shop at a perfect 5.0 (156). Interior/exterior, textured painting, drywall repair, handyman. Review: whole interior of a house don"
+},
+{
+"i": 4,
+"n": "AIC Painting",
+"c": "Land O' Lakes",
+"r": "C",
+"p": [
+"8139960149",
+"8139271375"
+],
+"e": "",
+"u": "https://www.aicpainting.com/Tampa-request-quote.php",
+"ch": "form",
+"gr": 4.9,
+"gc": 268,
+"sb": "none",
+"f": false,
+"note": "Veteran-owned, storefront on Land O Lakes Blvd. Largest review base of any local (4.9 on 268 Google). Reviews mention negotiating a deal with owner Jay. Lists apartment building painting und"
+},
+{
+"i": 5,
+"n": "Go With The Best Painters, LLC",
+"c": "Lutz",
+"r": "C",
+"p": [
+"9524526056"
+],
+"e": "gowiththebestpainters@gmail.com",
+"u": "https://app.acuityscheduling.com/schedule/c644c9c7",
+"ch": "email",
+"gr": 5.0,
+"gc": 44,
+"sb": "active",
+"f": false,
+"note": "One-man owner-operator (Oleg Vezikov). 5.0 across Google (44 on Birdeye, site claims 55), Thumbtack 5.0 on 12, BBB. Review: 'the price was reasonable' for interior. Thumbtack shows 3-room in"
+},
+{
+"i": 6,
+"n": "Top Tier Painting",
+"c": "New Port Richey",
+"r": "W",
+"p": [
+"7278086596"
+],
+"e": "Travis@toptierpaints.com",
+"u": "https://toptierpaints.com/",
+"ch": "email",
+"gr": 5.0,
+"gc": 14,
+"sb": "active",
+"f": false,
+"note": "Family shop run by Travis Haney (office: Kimberly Haney). Interior and exterior repaints, residential and commercial, Pasco + Hernando. Reviews highlight communication and schedule reliabili"
+},
+{
+"i": 7,
+"n": "Imperial Painting & Pressure Washing Contractors",
+"c": "Dade City",
+"r": "E",
+"p": [
+"8132353925"
+],
+"e": "",
+"u": "https://imperialpaints.us/",
+"ch": "form",
+"gr": 4.6,
+"gc": 64,
+"sb": "inactive",
+"f": false,
+"note": "12130 Smith Rd, family owned, Mon-Sat 7-7. Also does general renovation, so not interior-only. Google 4.6/64 via Birdeye; Yahoo Local shows 2.5/3 (small sample). Yelp files them under Genera"
+},
+{
+"i": 8,
+"n": "Five Star Painting of New Port Richey & Citrus Park",
+"c": "New Port Richey",
+"r": "W",
+"p": [
+"7272709533"
+],
+"e": "",
+"u": "https://www.fivestarpainting.com/schedule-estimate/",
+"ch": "form",
+"gr": 4.8,
+"gc": 374,
+"sb": "none",
+"f": true,
+"note": "Neighborly franchise, locally owned by Jeff Hawkins; 7620 Red Mill Cir, NPR 34653. Houzz 5.0 (7), HomeAdvisor/Angi 4.6, 600+ reviews across platforms. PRICE SIGNAL: '10% Off Any Job Over $1,"
+},
+{
+"i": 9,
+"n": "CK Painting Pro's FL, L.L.C.",
+"c": "Port Richey",
+"r": "W",
+"p": [
+"7274693029",
+"5189612848"
+],
+"e": "",
+"u": "https://www.facebook.com/ckpaintingfl/",
+"ch": "facebook",
+"gr": 4.9,
+"gc": 29,
+"sb": "active",
+"f": false,
+"note": "Two-man crew (David + partner), 7524 Handley Dr, Port Richey 34668. Reviews: 'meticulously thorough,' fixed another painter's botched interior in Hudson, 'affordable cost.' Works 7 days, ear"
+},
+{
+"i": 10,
+"n": "Above The Rest Painters",
+"c": "New Port Richey",
+"r": "W",
+"p": [
+"8138109703"
+],
+"e": "FredAFerrer@gmail.com",
+"u": "https://abovetherestpainters.com",
+"ch": "email",
+"gr": null,
+"gc": 0,
+"sb": "inactive",
+"f": false,
+"note": "Owner Fred Ferrer. Angi 5.0 and Houzz 5.0; Yelp 22 reviews (rating not retrievable). Address 7037 Lenape Cir, NPR 34653, second office in Riverview. Interior and exterior residential, Sherwi"
+},
+{
+"i": 11,
+"n": "M N Painting Services LLC",
+"c": "Wesley Chapel",
+"r": "C",
+"p": [
+"8137239708",
+"8134206538"
+],
+"e": "",
+"u": "https://mnpaintservices.com/",
+"ch": "form",
+"gr": 5.0,
+"gc": 25,
+"sb": "active",
+"f": false,
+"note": "Owner Marlon Noguera, 2 employees. Thumbtack 5.0 on 53 reviews, hired 77 times, Top Pro 2021-2022. Thumbtack profile: fair rates, no upfront payment required if customer supplies paint. Expl"
+},
+{
+"i": 12,
+"n": "Pro Kote Painting of Wesley Chapel LLC",
+"c": "Wesley Chapel / Zephyrhills",
+"r": "E",
+"p": [
+"8135285624",
+"8137288328"
+],
+"e": "Prokoteptg1@verizon.net",
+"u": "https://www.facebook.com/tvanchapaint/",
+"ch": "email",
+"gr": null,
+"gc": 0,
+"sb": "active",
+"f": false,
+"note": "Angi 5.0 with a 19-year repeat customer. Yelp reviews: whole-interior repaint done fast and neat, kitchen and mobile-home updates. Free estimates. Small family crew. No published pricing. St"
+},
+{
+"i": 13,
+"n": "Vene Painting Services Inc.",
+"c": "Land O' Lakes",
+"r": "C",
+"p": [
+"8132030817"
+],
+"e": "venepaintingservicesinc@gmail.com",
+"u": "https://venepaintingservices.com/contact-us/",
+"ch": "email",
+"gr": null,
+"gc": 0,
+"sb": "active",
+"f": false,
+"note": "2-person family shop (Melany Guevara, Leonardo Pena), never uses subs. Thumbtack 4.9 on 43 reviews, Top Pro 2021-2022; Facebook 100% recommend on 13. Thumbtack FAQ: 'Our prices can be negoti"
+},
+{
+"i": 14,
+"n": "Meticulous Painting, LLC",
+"c": "New Port Richey",
+"r": "W",
+"p": [
+"7272151361"
+],
+"e": "meticulous10857@gmail.com",
+"u": "https://meticulouspaintingllc.com",
+"ch": "email",
+"gr": null,
+"gc": 0,
+"sb": "active",
+"f": false,
+"note": "Owner Keith O'Loughlin; reviews name ~6 crew members, so a 2-10 person shop. Interior walls, doors, baseboards, staining. Sherwin-Williams default. Reviews praise prep and owner check-ins. H"
+},
+{
+"i": 15,
+"n": "Yates A Plus Painting LLC",
+"c": "Hudson",
+"r": "W",
+"p": [
+"8139000409"
+],
+"e": "yatespaintings@yahoo.com",
+"u": "https://www.activemember.com/yatesapluspainting/",
+"ch": "email",
+"gr": null,
+"gc": 0,
+"sb": "active",
+"f": false,
+"note": "Owner Donnie Yates III; Hudson 34667 (site says Port Richey). 'Quality work at affordable prices,' free estimates, hours 5:30am-9pm daily. Interior and exterior. Facebook page exists. RED FL"
+},
+{
+"i": 16,
+"n": "Painting By Ralph",
+"c": "Land O' Lakes",
+"r": "C",
+"p": [
+"8133801077"
+],
+"e": "ralphsansone6@gmail.com",
+"u": "",
+"ch": "email",
+"gr": null,
+"gc": 0,
+"sb": "inactive",
+"f": false,
+"note": "Owner-operator Ralph Sansone. Serves Land O Lakes, Wesley Chapel, Lutz, Odessa. Reviews across Yelp, Nextdoor, BestProsInTown (93 reviews there) consistently say fast, clean, reasonable pric"
+},
+{
+"i": 17,
+"n": "Lux Painting Pros LLC",
+"c": "New Port Richey",
+"r": "W",
+"p": [
+"7276193515"
+],
+"e": "",
+"u": "http://www.luxpaintingpros.com",
+"ch": "facebook",
+"gr": 5.0,
+"gc": 19,
+"sb": "inactive",
+"f": false,
+"note": "Interior-painting and cabinet-refinishing specialist, 6234 Grand Blvd Ste 201 / 5117 Hillside Dr, NPR 34652. Angi + HomeAdvisor profiles. Reviews cite 'main areas of the house' and full inte"
+},
+{
+"i": 18,
+"n": "Briggs Best Painting LLC",
+"c": "Zephyrhills",
+"r": "E",
+"p": [
+"8137823272"
+],
+"e": "",
+"u": "",
+"ch": "phone",
+"gr": 5.0,
+"gc": 15,
+"sb": "active",
+"f": false,
+"note": "Owner-operator Richard L Briggs, 7149 Andre Dr. Small shop, interior + exterior + pressure washing, Sherwin-Williams. Google reviews cite 'prices always very reasonable' and good arrival-tim"
+},
+{
+"i": 19,
+"n": "Chad Jackson Painting, Inc.",
+"c": "Port Richey",
+"r": "W",
+"p": [
+"7279675844"
+],
+"e": "",
+"u": "https://www.chadjacksonpainting.com/contact-us/",
+"ch": "form",
+"gr": null,
+"gc": 0,
+"sb": "active",
+"f": false,
+"note": "Angi 5.0. Small crew (reviews name 5 crew members). Interiors + Residential listed as core services; also HOA and property-maintenance work, which suggests repaint/turnover experience. Nextd"
+},
+{
+"i": 20,
+"n": "Apex Painting & Coating",
+"c": "Holiday",
+"r": "W",
+"p": [
+"7279442323",
+"7275147375"
+],
+"e": "apexpainting.tom@gmail.com",
+"u": "https://www.apexpaintingandcoating.com/",
+"ch": "email",
+"gr": null,
+"gc": 0,
+"sb": "inactive",
+"f": false,
+"note": "Two-partner shop (Tom and Chris). HomeAdvisor 4.8. Address 5746 Bacardi Ct, Holiday 34690. Site says 'any job, big or small.' Interior, cabinets, popcorn removal. Serves Holiday, Trinity, Po"
+},
+{
+"i": 21,
+"n": "Lou Phillips Painting, Inc.",
+"c": "Odessa",
+"r": "W",
+"p": [
+"8132991979",
+"8133800485"
+],
+"e": "",
+"u": "https://louphillipspainting.com/",
+"ch": "form",
+"gr": null,
+"gc": 0,
+"sb": "active",
+"f": false,
+"note": "Owner John L. 'Lou' Phillips, 18206 Keystone Grove Blvd, Odessa 33556 (BBB mailing address Tampa). PRICE SIGNALS: 'No Deposits Required,' free on-site estimates with itemized product list an"
+},
+{
+"i": 22,
+"n": "Polson Painting",
+"c": "Land O' Lakes",
+"r": "C",
+"p": [
+"8132445270"
+],
+"e": "service@polsonpainting.com",
+"u": "https://polsonpainting.com/contact/",
+"ch": "email",
+"gr": null,
+"gc": 0,
+"sb": "inactive",
+"f": false,
+"note": "Family-run (Don and Erin Polson), 30+ yrs, Pasco and Hillsborough. Nextdoor reviews note single-room jobs handled affordably and 'reasonably priced'. Publishes license numbers, which is rare"
+},
+{
+"i": 23,
+"n": "Zumo Painting & Renovations LLC",
+"c": "Wesley Chapel",
+"r": "C",
+"p": [
+"7277431438"
+],
+"e": "info@zumopainting.com",
+"u": "https://www.zumopainting.com/",
+"ch": "email",
+"gr": null,
+"gc": 0,
+"sb": "none",
+"f": false,
+"note": "5 employees, owner Carlos Blanco with brother Luis. Thumbtack 4.8 on 81 reviews, Top Pro 2022-2025. Thumbtack note: not hourly, requires a deposit to hold dates. Does cabinets, drywall, ligh"
+},
+{
+"i": 24,
+"n": "ODB Contractors Inc.",
+"c": "Wesley Chapel",
+"r": "C",
+"p": [
+"8137399109",
+"8133175784"
+],
+"e": "info@odbcontractorsinc.com",
+"u": "https://www.odbcontractorsinc.com/book-online;",
+"ch": "email",
+"gr": null,
+"gc": 0,
+"sb": "active",
+"f": false,
+"note": "Painter plus handyman. The only vendor in this set that explicitly markets rental turnover, make-ready, punch lists and investor portfolio maintenance, with estimates within 24 hours and sam"
+},
+{
+"i": 25,
+"n": "Andy Norris Painting, Inc.",
+"c": "Dade City",
+"r": "E",
+"p": [
+"8137834705",
+"8137834704"
+],
+"e": "andy@andynorrispainting.com",
+"u": "http://www.andynorrispainting.com/",
+"ch": "email",
+"gr": null,
+"gc": 0,
+"sb": "active",
+"f": false,
+"note": "HomeAdvisor 5.0, Houzz 5.0, Yellow Pages 5 stars. Hand-brush and roll only (no spray). One reviewer says Andy has painted multiple properties for them for 20+ years, which reads like landlor"
+},
+{
+"i": 26,
+"n": "Paint Plus of Tampa, LLC",
+"c": "Wesley Chapel (33544)",
+"r": "E",
+"p": [
+"8138026689"
+],
+"e": "",
+"u": "",
+"ch": "phone",
+"gr": 5.0,
+"gc": 12,
+"sb": "active",
+"f": false,
+"note": "HomeAdvisor and Angi 4.9. Family-owned, residential and commercial, power washing and waterproofing too. Reviews: clean, professional, repeat customers for big projects. Yelp page exists (55"
+},
+{
+"i": 27,
+"n": "Franklyn Painting LLC",
+"c": "Zephyrhills",
+"r": "E",
+"p": [
+"8136022628",
+"6126703951"
+],
+"e": "franklynpainting@gmail.com",
+"u": "https://www.franklynpainting.com/#lead-form",
+"ch": "email",
+"gr": null,
+"gc": 0,
+"sb": "active",
+"f": false,
+"note": "Owners Destiny and Nestor, female-led family business. Interior painting, cabinet refinishing, low-VOC options. No review counts retrievable (Nextdoor shows a 3.88 figure of unclear scale). "
+},
+{
+"i": 28,
+"n": "Prestige Pro Painters LLC",
+"c": "Zephyrhills (33541)",
+"r": "E",
+"p": [
+"3524578211"
+],
+"e": "",
+"u": "https://www.facebook.com/Prestigepropaintersllc/",
+"ch": "facebook",
+"gr": 5.0,
+"gc": 3,
+"sb": "active",
+"f": false,
+"note": "36706 Thompson Ln. Reviews: 'honest priced', quick and precise, commercial and residential. Only 3 Google reviews. Insurance not stated on pages found. Not found on Sunbiz mirror sites (D&B "
+},
+{
+"i": 29,
+"n": "Made Painting Tampa LLC",
+"c": "New Port Richey",
+"r": "W",
+"p": [
+"8135913111"
+],
+"e": "",
+"u": "https://www.madepaintingtampa.com/contact/",
+"ch": "form",
+"gr": null,
+"gc": 0,
+"sb": "active",
+"f": false,
+"note": "Owner-operator Nate (Nathan). The only local site that explicitly markets to 'property managers' and 'rental or multi-unit property owners.' Interior/exterior, pressure washing, paver sealin"
+},
+{
+"i": 30,
+"n": "Smoothlines Painting LLC",
+"c": "Wesley Chapel (33543, Zephyrhills-side)",
+"r": "E",
+"p": [
+"8135062235"
+],
+"e": "smoothlines813@gmail.com",
+"u": "https://smoothlinespainters.com/",
+"ch": "email",
+"gr": null,
+"gc": 0,
+"sb": "active",
+"f": false,
+"note": "Owner Israel Flores. Facebook 10 reviews, 100% recommend. Nextdoor says they serve homeowners and real estate professionals. Interior/exterior repaints and cabinet refacing, Sherwin-Williams"
+},
+{
+"i": 31,
+"n": "Cory Wayland Painting",
+"c": "New Port Richey",
+"r": "W",
+"p": [
+"7274609509"
+],
+"e": "",
+"u": "",
+"ch": "phone",
+"gr": null,
+"gc": 0,
+"sb": "active",
+"f": false,
+"note": "Owner-operator: Cory Wayland personally does the work, no subcontractors. Interior/exterior, popcorn removal, pressure washing. Nextdoor neighbors call him 'reliable, reasonable and stands b"
+},
+{
+"i": 32,
+"n": "DLF Professional Painting Inc.",
+"c": "Wesley Chapel",
+"r": "C",
+"p": [
+"8139499073"
+],
+"e": "",
+"u": "",
+"ch": "phone",
+"gr": null,
+"gc": 0,
+"sb": "inactive",
+"f": false,
+"note": "Long-running family shop (Wesley Chapel, Land O Lakes, Lutz, New Tampa). RED FLAG: former website domain now hosts an unrelated site, so confirm they are still operating before relying on th"
+},
+{
+"i": 33,
+"n": "Revive Painting LLC",
+"c": "Wesley Chapel",
+"r": "C",
+"p": [
+"8135000514"
+],
+"e": "",
+"u": "",
+"ch": "phone",
+"gr": null,
+"gc": 0,
+"sb": "active",
+"f": false,
+"note": "Owner Andrew. PUBLISHED PRICING: interior painting from $300 per standard bedroom, drywall repair from $50 per hole; 10% senior and 15% veteran discounts. Nextdoor praise for reasonable pric"
+},
+{
+"i": 34,
+"n": "Bob White Painting",
+"c": "Zephyrhills",
+"r": "E",
+"p": [
+"8137823521"
+],
+"e": "",
+"u": "",
+"ch": "phone",
+"gr": null,
+"gc": 0,
+"sb": "none",
+"f": false,
+"note": "Second-generation Zephyrhills painter. Search snippet cites an aggregate 4.7 stars / 44 reviews across platforms (source of that aggregate not verified). Nextdoor: free estimates, reasonable"
+},
+{
+"i": 35,
+"n": "Ed Staib Painting",
+"c": "New Port Richey",
+"r": "W",
+"p": [
+"7277763201"
+],
+"e": "",
+"u": "https://www.edstaibpainting.com/contact",
+"ch": "form",
+"gr": null,
+"gc": 0,
+"sb": "none",
+"f": false,
+"note": "Angi 5.0. True owner-operators: Ed (35+ yrs painting) and Amy do every job themselves, 'no rotating crews or subcontractors.' Site explicitly welcomes single-room jobs. Navy-veteran and woma"
+},
+{
+"i": 36,
+"n": "Refresh Painting LLC",
+"c": "Wesley Chapel",
+"r": "C",
+"p": [
+"3527214330"
+],
+"e": "",
+"u": "https://www.refreshpaintingfl.com/",
+"ch": "form",
+"gr": null,
+"gc": 0,
+"sb": "inactive",
+"f": false,
+"note": "Owner Rafael Allegue Navarro. Instagram bio calls them exterior painting and stucco specialists, though site lists interior painting. Yelp reviewer: fit small jobs into schedule easily, resp"
+},
+{
+"i": 37,
+"n": "JMC Painting and Beyond LLC",
+"c": "Wesley Chapel",
+"r": "C",
+"p": [
+"8139938489",
+"8133609354"
+],
+"e": "",
+"u": "",
+"ch": "facebook",
+"gr": null,
+"gc": 0,
+"sb": "active",
+"f": false,
+"note": "4-person crew, Thumbtack 5.0 on 17 reviews, Top Pro 2021, hired 7 times there. Interior repaint, drywall repair, popcorn removal. Accepts cash, check, Venmo, Zelle. Two different phone numbe"
+},
+{
+"i": 38,
+"n": "Partners in Painting LLC",
+"c": "Zephyrhills",
+"r": "E",
+"p": [
+"8139288131"
+],
+"e": "",
+"u": "https://www.facebook.com/partnersinpaintingllc/",
+"ch": "facebook",
+"gr": null,
+"gc": 0,
+"sb": "inactive",
+"f": false,
+"note": "Interior/exterior, residential/commercial. Explicitly lists Zephyrhills, Dade City, Wesley Chapel, Land O Lakes. Yelp page exists but rating not retrievable. Not found on Sunbiz mirror sites"
+},
+{
+"i": 39,
+"n": "Paint EZ of North Tampa",
+"c": "Spring Hill (Hernando) office; dedicated Zephyrhills service page",
+"r": "E",
+"p": [
+"3526069077"
+],
+"e": "northtampa@paintez.com",
+"u": "https://paintez.com/north-tampa/zephyrhills/",
+"ch": "email",
+"gr": null,
+"gc": 0,
+"sb": "none",
+"f": true,
+"note": "FRANCHISE (Paint EZ: 50+ franchises nationwide), price reference only. Owners Thomas and Jenn Reilly. Explicitly markets to property management groups and multi-property owners. 2/5/7-year w"
+},
+{
+"i": 40,
+"n": "Johnson's Painting Services",
+"c": "Hudson",
+"r": "W",
+"p": [
+"4135307391"
+],
+"e": "",
+"u": "",
+"ch": "phone",
+"gr": null,
+"gc": 0,
+"sb": "inactive",
+"f": false,
+"note": "Owner-operator Ken Johnson, 8249 Danbury Ln, Hudson 34667. Nextdoor: 4 verified recommendations. PRICE SIGNAL: reviewer says he 'didn't require a deposit which most did,' supplied the paint,"
+},
+{
+"i": 41,
+"n": "Frank Manzo And Sons Painting",
+"c": "Hudson",
+"r": "W",
+"p": [
+"7279671905"
+],
+"e": "",
+"u": "",
+"ch": "phone",
+"gr": null,
+"gc": 0,
+"sb": "none",
+"f": false,
+"note": "Family owner-operator, 8152 Millwood Dr, Hudson 34667. Nextdoor recommendations; 'Mike' does the work, 'painted two of my houses inside and out,' rooms and hallways. Thin online footprint; p"
+},
+{
+"i": 42,
+"n": "P & P Paint",
+"c": "Land O' Lakes",
+"r": "C",
+"p": [
+"8134215262"
+],
+"e": "",
+"u": "",
+"ch": "phone",
+"gr": null,
+"gc": 0,
+"sb": "active",
+"f": false,
+"note": "RED FLAG: no reviews found anywhere. Very new LLC. Included only because it is a Land O Lakes based interior painter with a Yelp listing and active Sunbiz record. Treat as a backup bid, ask "
+},
+{
+"i": 43,
+"n": "E Pro Painting Inc.",
+"c": "Wesley Chapel",
+"r": "E",
+"p": [
+"8138974407"
+],
+"e": "",
+"u": "",
+"ch": "phone",
+"gr": null,
+"gc": 0,
+"sb": "active",
+"f": false,
+"note": "President Edwin Esquivel; three named staff, so a small shop. Residential, commercial and industrial painting plus waterproofing, epoxy floors, pressure washing. BBB reviews positive but no "
+},
+{
+"i": 44,
+"n": "Zambrano Painting Services LLC",
+"c": "Lutz",
+"r": "C",
+"p": [
+"8135278642"
+],
+"e": "",
+"u": "https://www.activemember.com/zambranopaintingservices",
+"ch": "phone",
+"gr": null,
+"gc": 0,
+"sb": "active",
+"f": false,
+"note": "Owner Luis Zambrano. Residential and commercial painting with minor drywall repair. Angi lists 'small projects painting'. RED FLAG: no reviews on Angi or BusinessYab yet; BBB accredited but "
+},
+{
+"i": 45,
+"n": "Daniel's Professional Painting & Pressure Washing",
+"c": "Dade City",
+"r": "C",
+"p": [
+"3524242455",
+"3522616710"
+],
+"e": "",
+"u": "",
+"ch": "phone",
+"gr": null,
+"gc": 0,
+"sb": "none",
+"f": false,
+"note": "HomeAdvisor 4.7 on 29 verified reviews, 93% recommend; interior painting for multiple rooms plus drywall repair and textures. Included specifically for the Trilby / north Pasco properties. W"
+},
+{
+"i": 46,
+"n": "The Real Deal Painting",
+"c": "Zephyrhills (33542)",
+"r": "E",
+"p": [
+"7274704043"
+],
+"e": "",
+"u": "",
+"ch": "phone",
+"gr": null,
+"gc": 0,
+"sb": "inactive",
+"f": false,
+"note": "38018 Cross Dr. Interior and exterior, free estimates. Listed on HomeAdvisor, Yelp and Yahoo Local but no rating retrievable. Yahoo listing says 'open 24 hours' (listing quality flag). Do no"
+},
+{
+"i": 47,
+"n": "Pro-Way Professional Painting and Pressure Washing LLC",
+"c": "Zephyrhills",
+"r": "E",
+"p": [
+"8136026899"
+],
+"e": "",
+"u": "",
+"ch": "phone",
+"gr": null,
+"gc": 0,
+"sb": "inactive",
+"f": false,
+"note": "6830 Wire Rd. Nextdoor-verified house painter (2017, 2021) offering interior work. Facebook page exists. No ratings retrievable; insurance not stated. Thin data."
+},
+{
+"i": 48,
+"n": "Sawyer and Sons Painting Professionals",
+"c": "San Antonio",
+"r": "E",
+"p": [
+"3528071848"
+],
+"e": "",
+"u": "",
+"ch": "phone",
+"gr": null,
+"gc": 0,
+"sb": "none",
+"f": false,
+"note": "Family owned, advertises 'extremely competitive pricing'. On Yelp and Angi; ratings not retrievable. Insurance not stated. No Sunbiz entity found. Closest shop to San Antonio / St. Leo."
+},
+{
+"i": 49,
+"n": "Gueritas Painting LLC",
+"c": "Dade City",
+"r": "E",
+"p": [
+"8137758602"
+],
+"e": "",
+"u": "",
+"ch": "phone",
+"gr": null,
+"gc": 0,
+"sb": "active",
+"f": false,
+"note": "Residential and commercial, interior to exterior. Addresses vary by listing (37505 Layton Rd on Yelp, 37305 Lock St / 37301 Moore Dr elsewhere). RED FLAG: no public reviews found on Manta; Y"
+},
+{
+"i": 50,
+"n": "Twocanpaint",
+"c": "Wesley Chapel",
+"r": "C",
+"p": [
+"8137314040"
+],
+"e": "",
+"u": "http://twocanpaint.com/",
+"ch": "phone",
+"gr": null,
+"gc": 0,
+"sb": "active",
+"f": false,
+"note": "Father-son owner-operator (Lee and Jonathan/Thomas). Birdeye 5.0 on 4. Reviews praise holding to the quote even when more paint was needed. One complaint about tape and debris left in landsc"
+}
+]</script>
+<script>
+(function(){
+"use strict";
+var V = JSON.parse(document.getElementById('data').textContent);
+var Q = {};              // vendor id -> bid record
+var db = null;
+
+var RFQ = [
+"Subject: Interior paint quote, vacant 1,200 sq ft rental, Pasco County","",
+"Hi,","",
+"I'm getting quotes for an interior repaint on a vacant rental house in Pasco",
+"County. We have several rental houses in the county and repaint at every",
+"turnover, so this is repeat work if the price and the job are good.","",
+"  - 1,200 sq ft, 3 bed / 1 bath, living room and kitchen, 8 ft ceilings",
+"  - Empty house, lockbox access, nothing to move",
+"  - One color throughout, semi-gloss on walls, ceilings, trim, doors and",
+"    baseboards",
+"  - Same color as existing, a few minor stains to spot-prime, no smoke",
+"    damage, light prep only (nail holes, caulk)",
+"  - Rough take-off: about 2,600 sq ft of wall, 1,200 sq ft of ceiling,",
+"    8 doors, 250 ft of baseboard","",
+"Can you send me:","",
+"  1. Price for 2 coats with paint included (tax in), and the product you'd use",
+"  2. Price for 1 coat plus touch-up, since the color isn't changing",
+"  3. Labor-only price if we supply the paint",
+"  4. Days on site and your earliest start",
+"  5. Confirmation you carry general liability and workers' comp (or the",
+"     Florida exemption); we'll ask for the certificate before work starts",
+"  6. Your repeat rate for turnover repaints, if you offer one","",
+"If you need to walk the house before quoting, say so and we'll set up",
+"lockbox access.","",
+"Thanks,","[your name]","[your phone]","[your email]"
+].join("\n");
+document.getElementById('rfq').textContent = RFQ;
+document.getElementById('copy').addEventListener('click', function(){
+  var b=this;
+  navigator.clipboard.writeText(RFQ).then(function(){
+    b.textContent="Copied"; setTimeout(function(){b.textContent="Copy";},1600);
+  }, function(){ b.textContent="Select it manually"; });
+});
+
+/* ---- benchmark scale ---- */
+var MAX = 8000;
+var BANDS = [
+  {a:0,    b:2200, c:"var(--line2)", t:""},
+  {a:2200, b:2700, c:"var(--band-low)",  t:"Small crew"},
+  {a:2700, b:3000, c:"var(--line2)", t:""},
+  {a:3000, b:4000, c:"var(--band-mid)",  t:"Insured co."},
+  {a:4000, b:5000, c:"var(--line2)", t:""},
+  {a:5000, b:6500, c:"var(--band-high)", t:"Retail brand"},
+  {a:6500, b:MAX,  c:"var(--line2)", t:""}
+];
+var bands=document.getElementById('bands');
+BANDS.forEach(function(x){
+  var d=document.createElement('div');
+  d.className='band';
+  d.style.flex=(x.b-x.a)+' 0 0';
+  d.style.background=x.c;
+  if(x.t){ var s=document.createElement('span'); s.textContent=x.t; d.appendChild(s); }
+  bands.appendChild(d);
+});
+var ticks=document.getElementById('ticks');
+[0,2000,4000,6000,8000].forEach(function(v){
+  var t=document.createElement('div');
+  t.className='tick mono';
+  t.style.left=(v/MAX*100)+'%';
+  t.textContent='$'+(v/1000)+'k';
+  ticks.appendChild(t);
+});
+function drawPins(){
+  Array.prototype.slice.call(document.querySelectorAll('.pin')).forEach(function(p){p.remove();});
+  Object.keys(Q).forEach(function(k){
+    var r=Q[k], n=parseFloat(r.total);
+    if(!n || !isFinite(n)) return;
+    var pin=document.createElement('div');
+    pin.className='pin';
+    pin.style.left=Math.min(n/MAX*100,99.5)+'%';
+    var b=document.createElement('b');
+    b.textContent='$'+Math.round(n).toLocaleString();
+    pin.appendChild(b);
+    pin.title=(r.name||'')+': $'+n;
+    bands.parentNode.appendChild(pin);
+  });
+}
+
+/* ---- rows ---- */
+var filter='all', term='';
+function ch(v){return v.ch;}
+function matches(v){
+  if(term){
+    var hay=(v.n+' '+v.c).toLowerCase();
+    if(hay.indexOf(term)<0) return false;
+  }
+  if(filter==='all') return true;
+  if(filter==='quoted') return !!Q[v.i];
+  if(filter==='email') return v.ch==='email';
+  if(filter==='phone') return v.ch==='phone';
+  return v.r===filter;
+}
+function tel(p){return 'tel:+1'+p;}
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+
+function render(){
+  var host=document.getElementById('rows');
+  host.textContent='';
+  var shown=0;
+  V.forEach(function(v){
+    if(!matches(v)) return;
+    shown++;
+    var q=Q[v.i];
+    var row=document.createElement('div');
+    row.className='row'+(q?' done':'');
+
+    var rank=document.createElement('div');
+    rank.className='rank mono'; rank.textContent=v.i;
+    row.appendChild(rank);
+
+    var main=document.createElement('div');
+    var nm=document.createElement('div');
+    nm.className='nm'; nm.textContent=v.n;
+    if(v.f){ var fr=document.createElement('span'); fr.className='tag t-fr'; fr.textContent='franchise';
+             fr.style.marginLeft='7px'; nm.appendChild(fr); }
+    main.appendChild(nm);
+    var meta=document.createElement('div');
+    meta.className='meta';
+    meta.textContent=(v.c||'Pasco County')+(v.note?' · '+v.note.slice(0,72):'');
+    main.appendChild(meta);
+    row.appendChild(main);
+
+    var rg=document.createElement('div');
+    rg.className='rg';
+    var sbt=document.createElement('span');
+    sbt.className='tag '+(v.sb==='active'?'t-act':(v.sb==='inactive'?'t-in':'t-no'));
+    sbt.textContent=v.sb==='active'?'active':(v.sb==='inactive'?'inactive':'no entity');
+    sbt.title=v.sb==='active'?'Active Florida entity on file with the state'
+      :(v.sb==='inactive'?'Registered entity is inactive. Ask for their current entity or DBA.'
+      :'No matching Florida entity found. May be a sole proprietor, which is legal for painters.');
+    rg.appendChild(sbt);
+    row.appendChild(rg);
+
+    var rev=document.createElement('div');
+    rev.className='rev mono';
+    if(v.gr){ rev.textContent=v.gr.toFixed(1)+'  '+v.gc+' rev'; }
+    else { rev.innerHTML='<span class="no">no rating found</span>'; }
+    row.appendChild(rev);
+
+    var qc=document.createElement('div');
+    if(q && q.total){ qc.className='quoted'; qc.textContent='$'+Number(q.total).toLocaleString(); }
+    else if(q){ qc.className='rev'; qc.textContent=q.status||'logged'; }
+    row.appendChild(qc);
+
+    var acts=document.createElement('div');
+    acts.className='acts';
+    if(v.e){
+      var a=document.createElement('a'); a.className='btn'; a.href='mailto:'+v.e+
+        '?subject='+encodeURIComponent('Interior paint quote, vacant 1,200 sq ft rental, Pasco County')+
+        '&body='+encodeURIComponent(RFQ.split('\n').slice(2).join('\n'));
+      a.textContent='Email'; acts.appendChild(a);
+    }
+    if(v.u){
+      var w=document.createElement('a'); w.className='btn'; w.href=v.u; w.target='_blank'; w.rel='noopener';
+      w.textContent='Site'; acts.appendChild(w);
+    }
+    (v.p||[]).slice(0,1).forEach(function(p){
+      var c=document.createElement('a'); c.className='btn'; c.href=tel(p);
+      c.textContent=p.slice(0,3)+'-'+p.slice(3,6)+'-'+p.slice(6);
+      acts.appendChild(c);
+    });
+    var lg=document.createElement('button');
+    lg.className='btn pri'; lg.type='button'; lg.textContent=q?'Edit bid':'Log bid';
+    lg.addEventListener('click',function(){ openDlg(v); });
+    acts.appendChild(lg);
+    row.appendChild(acts);
+
+    host.appendChild(row);
+  });
+  if(!shown){
+    var e=document.createElement('p');
+    e.style.cssText='color:var(--mute);padding:22px 4px';
+    e.textContent='No painter matches that.';
+    host.appendChild(e);
+  }
+  counts();
+  drawPins();
+}
+function counts(){
+  var n=function(id,val){var el=document.getElementById('n-'+id); if(el) el.textContent=val;};
+  n('all',V.length);
+  ['W','C','E'].forEach(function(r){ n(r, V.filter(function(v){return v.r===r;}).length); });
+  n('email', V.filter(function(v){return v.ch==='email';}).length);
+  n('phone', V.filter(function(v){return v.ch==='phone';}).length);
+  var qn=Object.keys(Q).length;
+  n('quoted', qn);
+  document.getElementById('cnt').textContent=qn;
+}
+Array.prototype.slice.call(document.querySelectorAll('.chip')).forEach(function(b){
+  b.addEventListener('click',function(){
+    filter=b.dataset.f;
+    Array.prototype.slice.call(document.querySelectorAll('.chip')).forEach(function(o){
+      o.setAttribute('aria-pressed', String(o===b));
+    });
+    render();
+  });
+});
+document.getElementById('q').addEventListener('input',function(){
+  term=this.value.trim().toLowerCase(); render();
+});
+
+/* ---- bid dialog ---- */
+var dlg=document.getElementById('dlg'), cur=null;
+function openDlg(v){
+  cur=v;
+  document.getElementById('dnm').textContent=v.n;
+  var q=Q[v.i]||{};
+  document.getElementById('f-total').value=q.total||'';
+  document.getElementById('f-one').value=q.one||'';
+  document.getElementById('f-labor').value=q.labor||'';
+  document.getElementById('f-days').value=q.days||'';
+  document.getElementById('f-prod').value=q.product||'';
+  document.getElementById('f-st').value=q.status||'quoted';
+  document.getElementById('f-note').value=q.note||'';
+  if(dlg.showModal) dlg.showModal(); else dlg.setAttribute('open','');
+}
+dlg.addEventListener('close',function(){
+  if(!cur) return;
+  var act=dlg.returnValue;
+  if(act==='save'){
+    var num=function(id){var s=document.getElementById(id).value.replace(/[^0-9.]/g,'');return s?s:'';};
+    var rec={ id:cur.i, name:cur.n,
+      total:num('f-total'), one:num('f-one'), labor:num('f-labor'),
+      days:document.getElementById('f-days').value.trim(),
+      product:document.getElementById('f-prod').value.trim(),
+      status:document.getElementById('f-st').value,
+      note:document.getElementById('f-note').value.trim(),
+      at:new Date().toISOString() };
+    Q[cur.i]=rec; persist(cur.i, rec);
+  } else if(act==='clear'){
+    delete Q[cur.i]; persist(cur.i, null);
+  }
+  cur=null; render();
+});
+
+/* ---- storage: db when the viewer has it, localStorage otherwise ---- */
+var LS='pasco-bids-v1';
+function localLoad(){
+  try{ var r=localStorage.getItem(LS); if(r) Q=JSON.parse(r)||{}; }catch(e){}
+}
+function localSave(){
+  try{ localStorage.setItem(LS, JSON.stringify(Q)); }catch(e){}
+}
+function persist(id, rec){
+  localSave();
+  if(!db) return;
+  var ref=db.collection('quotes').doc(String(id));
+  var p = rec ? ref.set(rec) : ref.delete();
+  p.catch(function(e){ console.warn('bid not saved to the shared store:', e && e.code); });
+}
+localLoad(); render();
+
+if(window.claude && claude.use){
+  claude.use('db').then(function(d){
+    if(!d) return;
+    db=d;
+    db.collection('quotes').onSnapshot(function(snap){
+      var next={};
+      snap.docs.forEach(function(s){ var v=s.data(); if(v && v.id) next[v.id]=v; });
+      Object.keys(Q).forEach(function(k){ if(!next[k]) { /* keep local-only until synced */ next[k]=Q[k]; } });
+      Q=next; localSave(); render();
+    }, function(e){ console.warn('shared store stopped:', e && e.code); });
+  });
+}
+})();
+</script>
+
+</body>
+</html>

@@ -1,2 +1,8 @@
 .DS_Store
 __pycache__/
+
+# Private working files: contain Takashi personal contact details.
+# This repo is public (GitHub Pages). Never commit these.
+pasco-painting/RFQ-DRAFT.md
+pasco-painting/SCOPE.md
+pasco-painting/bids.html
