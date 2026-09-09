@@ -3,7 +3,7 @@ import html, os, runpy
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ns = runpy.run_path(os.path.join(HERE, "build.py"))
-triage, sourcing, checks, notes = ns["triage"], ns["sourcing"], ns["checks"], ns["notes"]
+triage, sourcing, checks, notes, SAMPLE = ns["triage"], ns["sourcing"], ns["checks"], ns["notes"], ns.get("SAMPLE", [])
 e = html.escape
 
 SITE_URL = "https://shaw-arcade.github.io/tampa-vendor-bench/"
@@ -30,6 +30,32 @@ def check_items():
         w = f"<a href='{e(link)}' target='_blank' rel='noopener'>{e(where)}</a>" if link else e(where)
         out.append(f"<li><strong>{e(check)}</strong><span class='where'>{w}</span><span class='rule'>{e(rule)}</span></li>")
     return "\n".join(out)
+
+
+def sample_rows():
+    out = []
+    for v in SAMPLE:
+        lic = v.get("license","") or "n/a"
+        ver = v.get("license_verified","")
+        licstr = f"{e(lic)}" + (f"<br><small>verified {e(ver)}</small>" if ver else "")
+        rev = v.get("reviews","")
+        name = e(v.get("company","") or v.get("name",""))
+        web = v.get("web","")
+        if web: name = f"<a href='{e(web)}' target='_blank' rel='noopener'>{name}</a>"
+        out.append(f"<tr><td><span class='pill'>{e(v.get('trade',''))}</span></td><td class='issue'>{name}<br><small>{e(v.get('phone',''))}</small></td>"
+                   f"<td>{licstr}</td><td>{e(v.get('wc',''))}</td><td class='cost'>{e(v.get('rate',''))}<br><small>{e(v.get('trip',''))}</small></td><td>{e(rev)}</td><td class='before'>{e(v.get('notes',''))}</td></tr>")
+    return "\n".join(out)
+
+QUESTIONS = [
+ "Where are the houses? A list of cities or ZIP codes is enough. An address list is better, because it lets me group houses so one plumber covers a whole cluster.",
+ "Which repairs cost you the most or happen the most? AC, plumbing, electrical, roof, handyman work, pest, lawn, turnover cleaning.",
+ "Can you send a few recent repair invoices, or last year's total repair spend? Three or four bills is enough to show what you paid versus what the vetted people charge.",
+ "Do you want real quotes, or just the vetted list? Quotes mean the vendors get contacted on your behalf. If yes, which email should they reply to?",
+ "Any vendors you already like and want to keep? Any you never want to see again?",
+ "Anything I should know about specific houses? Very old plumbing or wiring, a roof near the end of its life, a house that always has problems.",
+]
+def question_items():
+    return "\n".join(f"<li>{e(q)}</li>" for q in QUESTIONS)
 
 def note_items():
     return "\n".join(f"<li>{e(n)}</li>" for n in notes)
@@ -100,7 +126,7 @@ footer a{{color:var(--mute)}}
 <p>A landlord's system for keeping reliable, fairly priced plumbers, electricians and handymen on call in Tampa. The workbook runs it. This page explains it.</p>
 <a class="btn" href="Tampa-Vendor-Bench.xlsx" download>Download the workbook (.xlsx)</a><a class="btn ghost" href="#triage">Jump to the triage guide</a>
 </div></header>
-<nav><div class="wrap"><a href="#answer">The short answer</a><a href="#rules">Bench rules</a><a href="#triage">Triage guide</a><a href="#sourcing">Where to find people</a><a href="#vetting">Vetting</a><a href="#tampa">Tampa notes</a><a href="#cost">Cost to hand off</a><a href="#workbook">The workbook</a></div></nav>
+<nav><div class="wrap"><a href="#answer">The short answer</a><a href="#rules">Bench rules</a><a href="#triage">Triage guide</a><a href="#sourcing">Where to find people</a><a href="#vetting">Vetting</a><a href="#tampa">Tampa notes</a><a href="#sample">Sample bench</a><a href="#cost">Cost to hand off</a><a href="#questions">Questions for the owner</a><a href="#workbook">The workbook</a></div></nav>
 
 <section id="answer"><div class="wrap">
 <h2>Are you overthinking it?</h2>
@@ -148,6 +174,16 @@ footer a{{color:var(--mute)}}
 <ul class="notes">{note_items()}</ul>
 </div></section>
 
+<section id="sample"><div class="wrap">
+<h2>Sample bench: Tampa</h2>
+<p class="lede">What one region looks like once it is done. Every name below was found through the channels above, then checked against the Florida license database and public reviews. Nobody was contacted. This is the vetted list, not quotes. Rates shown are what each shop publishes. Send the list of cities and this gets built for every area.</p>
+<div class="tablewrap"><table style="min-width:1000px">
+<thead><tr><th>Trade</th><th>Shop</th><th>FL license</th><th>Workers comp</th><th>Published rate</th><th>Reviews</th><th>Notes</th></tr></thead>
+<tbody>{sample_rows()}</tbody>
+</table></div>
+<p class="lede" style="margin-top:12px;font-size:13px">License status and expiry from the Florida DBPR licensee search on the date shown. Workers comp from the Florida DWC proof-of-coverage database where checked. Ratings from Google at time of research. Confirm insurance with a certificate before the first job.</p>
+</div></section>
+
 <section id="cost"><div class="wrap">
 <h2>What it costs to hand this off</h2>
 <p class="lede">Running the bench is a few hours a week for a handful of doors, more at turnover. Here is what each level of help costs in 2026.</p>
@@ -161,6 +197,12 @@ footer a{{color:var(--mute)}}
 <tr><td>Full property manager</td><td>8 to 10 percent of rent, plus 10 percent maintenance markup and leasing fees</td><td>Everything, including tenants and rent</td><td>Reviewing their markups. Their vendors are rarely the cheapest.</td></tr>
 </tbody></table></div>
 <p style="font-size:14px;color:var(--mute)">Sources: <a href="https://shoreagents.com/resources/property-maintenance-coordinator-va" target="_blank" rel="noopener">ShoreAgents</a>, <a href="https://www.ziprecruiter.com/Salaries/Virtual-Assistant-Philippines-Salary" target="_blank" rel="noopener">ZipRecruiter</a>, <a href="https://sfailabs.com/guides/best-ai-maintenance-triage-tools-small-property-managers" target="_blank" rel="noopener">SFAI Labs on Latchel pricing</a>.</p>
+</div></section>
+
+<section id="questions"><div class="wrap">
+<h2>Questions for the owner</h2>
+<p class="lede">Short answers are fine. With these, the sample above gets built for every area.</p>
+<ol class="checks">{question_items()}</ol>
 </div></section>
 
 <section id="workbook"><div class="wrap">

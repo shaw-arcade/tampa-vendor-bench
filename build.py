@@ -4,6 +4,13 @@ from openpyxl.worksheet.datavalidation import DataValidation
 from openpyxl.formatting.rule import FormulaRule
 from openpyxl.utils import get_column_letter
 
+import os
+
+# ---------------- Sample bench data (filled by research, see sample_bench.json) ----------------
+import json as _json
+_sb = os.path.join(os.path.dirname(os.path.abspath(__file__)), "sample_bench.json")
+SAMPLE = _json.load(open(_sb)) if os.path.exists(_sb) else []
+
 wb = Workbook()
 F = "Arial"
 HDR_FILL = PatternFill("solid", fgColor="1F3A5F")
@@ -91,9 +98,20 @@ body(wv, 2, ex, EX_FILL)
 from datetime import date
 wv["K2"] = date(2027, 3, 15); wv["K2"].number_format = "yyyy-mm-dd"; wv["K2"].font = BODY; wv["K2"].border = BORDER
 LOG = "'Job Log'"
+SAMPLE_FILL = PatternFill("solid", fgColor="EAF2E3")
 for r in range(2, 42):
     if r > 2:
         body(wv, r, [""]*22, INPUT_FILL)
+    si = r - 3
+    if 0 <= si < len(SAMPLE):
+        v = SAMPLE[si]
+        vals = [v.get("name",""), v.get("company",""), v.get("trade",""), v.get("phone",""), v.get("web",""),
+                v.get("role","Candidate"), "Active", v.get("license",""), v.get("license_type",""), v.get("license_verified",""),
+                None, None, v.get("wc",""), v.get("rate",""), v.get("trip",""), v.get("response",""), v.get("found_via",""),
+                None, None, None, None, v.get("notes","")]
+        body(wv, r, vals, SAMPLE_FILL)
+        if v.get("gl_expiry"):
+            wv[f"K{r}"] = v["gl_expiry"]
     # formula columns stay black on white
     for col, formula in [
         ("L", f'=IF(K{r}="","",K{r}-TODAY())'),
@@ -112,7 +130,7 @@ wv.freeze_panes = "D2"
 
 # dropdowns
 dv_trade = DataValidation(type="list", formula1='"Handyman,Plumber,Electrician,HVAC,Roofer,Appliance,Pest,Lawn / Tree,Cleaner / Turnover,Locksmith,Painter,Drywall / Stucco,Pool,Fence / Gate,GC"', allow_blank=True)
-dv_role = DataValidation(type="list", formula1='"Primary,Backup,Trial,Retired"', allow_blank=True)
+dv_role = DataValidation(type="list", formula1='"Primary,Backup,Trial,Candidate,Retired"', allow_blank=True)
 dv_status = DataValidation(type="list", formula1='"Active,On hold,Do not use"', allow_blank=True)
 dv_wc = DataValidation(type="list", formula1='"Y,Exempt,None,Unknown"', allow_blank=True)
 for dv, rng in [(dv_trade, "C2:C41"), (dv_role, "F2:F41"), (dv_status, "G2:G41"), (dv_wc, "M2:M41")]:
