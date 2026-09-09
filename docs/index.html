@@ -5,66 +5,57 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Tampa Vendor Bench</title>
 <meta name="description" content="A landlord's system for reliable, fairly priced trades in Tampa: bench, triage guide, sourcing channels, vetting checklist, and the workbook that runs it.">
-<link rel="icon" type="image/png" sizes="32x32" href="brand/favicon-32.png">
-<link rel="icon" type="image/png" sizes="64x64" href="brand/favicon-64.png">
-<link rel="apple-touch-icon" href="brand/apple-touch-icon.png">
 <meta property="og:title" content="Tampa Vendor Bench">
 <meta property="og:description" content="Reliable trades at fair prices for Tampa rentals. Triage guide, sourcing channels, vetting checklist, and the workbook.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://shaw-arcade.github.io/tampa-vendor-bench/">
-<meta property="og:image" content="https://shaw-arcade.github.io/tampa-vendor-bench/brand/og-card.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta name="twitter:card" content="summary_large_image">
 <style>
-:root{--ink:#26241f;--gold:#b49a5a;--ivory:#f7f4ee;--paper:#fffdf9;--mute:#6b665c;--line:#e6e0d3;--red:#b3402e;--green:#3d6b3f}
-*{box-sizing:border-box}
-body{margin:0;font:16px/1.55 Georgia,'Times New Roman',serif;color:var(--ink);background:var(--ivory)}
-a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--gold);text-underline-offset:3px}
-header{background:var(--ink);color:var(--ivory);padding:56px 20px 44px}
-.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
-.mark{display:inline-block;width:44px;height:44px;border:1.5px solid var(--gold);color:var(--gold);text-align:center;line-height:42px;font-size:26px;margin-bottom:18px}
-h1{font-size:clamp(30px,5vw,46px);margin:0 0 10px;font-weight:normal;letter-spacing:.5px}
-header p{max-width:640px;margin:0 0 22px;color:#d8d2c4;font-size:18px}
-.btn{display:inline-block;background:var(--gold);color:var(--ink);padding:12px 22px;text-decoration:none;font-weight:bold;letter-spacing:.3px;border-radius:2px}
-.btn.ghost{background:transparent;color:var(--gold);border:1px solid var(--gold);margin-left:8px}
-nav{background:var(--paper);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5}
-nav .wrap{display:flex;gap:18px;overflow-x:auto;padding:12px 20px;font-size:14px;white-space:nowrap}
-nav a{text-decoration:none;color:var(--mute)} nav a:hover{color:var(--ink)}
-section{padding:44px 0;border-bottom:1px solid var(--line)}
-h2{font-size:26px;font-weight:normal;margin:0 0 6px}
-.lede{color:var(--mute);margin:0 0 22px;max-width:700px}
-.answer{background:var(--paper);border-left:4px solid var(--gold);padding:18px 22px;margin:0 0 18px;font-size:17px}
-ul.rules{padding-left:20px} ul.rules li{margin:0 0 10px}
-.tablewrap{overflow-x:auto;border:1px solid var(--line);background:var(--paper)}
-table{border-collapse:collapse;width:100%;min-width:900px;font-size:14px}
-th{background:var(--ink);color:var(--ivory);text-align:left;padding:10px 12px;font-weight:normal;letter-spacing:.3px}
-td{padding:10px 12px;border-top:1px solid var(--line);vertical-align:top}
-td.issue{font-weight:bold;min-width:180px} td.cost{white-space:nowrap} td.before{color:var(--mute);min-width:260px}
-td.lic.yes{color:var(--red)} td.lic.no{color:var(--green)} td.lic.grey{color:var(--mute)}
-.pill{display:inline-block;border:1px solid var(--gold);padding:2px 8px;border-radius:12px;font-size:13px;white-space:nowrap}
-.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px}
-.card{display:flex;gap:14px;background:var(--paper);border:1px solid var(--line);padding:16px}
-.card .rank{flex:0 0 34px;height:34px;border:1.5px solid var(--gold);color:var(--gold);text-align:center;line-height:32px;font-size:16px}
-.card h3{margin:0 0 6px;font-size:16px;font-weight:bold} .card p{margin:0 0 6px;font-size:14px}
-.card .best{color:var(--ink)} .card .how{color:var(--mute)} .card .cost{font-size:12px;color:var(--gold)}
-ol.checks{padding-left:22px} ol.checks li{margin:0 0 14px;background:var(--paper);border:1px solid var(--line);padding:12px 14px 12px 8px;list-style-position:inside}
-ol.checks strong{display:block} ol.checks .where{display:block;font-size:14px;margin:4px 0} ol.checks .rule{display:block;font-size:14px;color:var(--mute)}
-ul.notes{padding-left:20px} ul.notes li{margin:0 0 10px}
+body{margin:0;background:#fff;color:#000;font:14px/1.6 Arial,Helvetica,sans-serif}
+.wrap{max-width:816px;margin:0 auto;padding:0 24px}
+header{padding:40px 0 8px}
+header .wrap{padding-top:0}
+h1{font-size:26px;font-weight:bold;margin:0 0 8px}
+h2{font-size:18px;font-weight:bold;margin:0 0 8px}
+h3{font-size:14px;font-weight:bold;margin:0 0 4px}
+a{color:#1155cc}
+.btn{display:inline-block;margin:0 14px 0 0}
+.mark{display:none}
+header p{margin:0 0 12px}
+nav{padding:8px 0 16px}
+nav .wrap{display:block}
+nav a{display:block;margin:2px 0}
+section{padding:20px 0;border-top:1px solid #ddd}
+.lede{margin:0 0 12px;color:#333}
+.answer{margin:0 0 12px}
+ul.rules{padding-left:22px} ul.rules li{margin:0 0 8px}
+.tablewrap{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:13px}
+th,td{border:1px solid #bbb;padding:6px 8px;text-align:left;vertical-align:top}
+th{background:#f3f3f3;font-weight:bold}
+td.issue{font-weight:bold}
+td.lic.yes,td.lic.no,td.lic.grey{color:#000}
+.pill{white-space:nowrap}
+.cards{display:block}
+.card{display:flex;gap:10px;margin:0 0 12px}
+.card .rank{flex:0 0 22px;font-weight:bold}
+.card p{margin:0 0 4px}
+.card .how{color:#333} .card .cost{color:#555;font-size:12px}
+ol.checks{padding-left:22px} ol.checks li{margin:0 0 10px}
+ol.checks strong{display:block} ol.checks .where,ol.checks .rule{display:block}
+ol.checks .rule{color:#333}
+ul.notes{padding-left:22px} ul.notes li{margin:0 0 8px}
 .rates td:first-child{font-weight:bold}
-footer{padding:30px 0 50px;color:var(--mute);font-size:13px}
-footer a{color:var(--mute)}
-@media (max-width:600px){header{padding:40px 0 32px} .btn.ghost{margin:10px 0 0}}
+footer{padding:20px 0 40px;color:#555;font-size:12px;border-top:1px solid #ddd}
+small{color:#555}
 </style>
 </head>
 <body>
 <header><div class="wrap">
-<div class="mark">T</div>
 <h1>Tampa Vendor Bench</h1>
 <p>A landlord's system for keeping reliable, fairly priced plumbers, electricians and handymen on call in Tampa. The workbook runs it. This page explains it.</p>
-<a class="btn" href="Tampa-Vendor-Bench.xlsx" download>Download the workbook (.xlsx)</a><a class="btn ghost" href="#triage">Jump to the triage guide</a>
+<p><a class="btn" href="Tampa-Vendor-Bench.xlsx" download>Download the workbook (.xlsx)</a></p>
 </div></header>
-<nav><div class="wrap"><a href="#answer">The short answer</a><a href="#rules">Bench rules</a><a href="#triage">Triage guide</a><a href="#sourcing">Where to find people</a><a href="#vetting">Vetting</a><a href="#tampa">Tampa notes</a><a href="#sample">Sample bench</a><a href="#cost">Cost to hand off</a><a href="#questions">Questions for the owner</a><a href="#workbook">The workbook</a></div></nav>
+<nav><div class="wrap"><strong>Contents</strong><a href="#answer">The short answer</a><a href="#rules">Bench rules</a><a href="#triage">Triage guide</a><a href="#sourcing">Where to find people</a><a href="#vetting">Vetting</a><a href="#tampa">Tampa notes</a><a href="#sample">Sample bench</a><a href="#cost">Cost to hand off</a><a href="#questions">Questions for the owner</a><a href="#workbook">The workbook</a></div></nav>
 
 <section id="answer"><div class="wrap">
 <h2>Are you overthinking it?</h2>
@@ -222,7 +213,7 @@ footer a{color:var(--mute)}
 <li><strong>Job Log.</strong> One row per job with property and vendor dropdowns, quote versus paid, a 1 to 5 rating, and a 90-day spend summary.</li>
 <li><strong>Triage Guide, Tampa Sourcing, Vetting Checklist.</strong> The three tables on this page, with links.</li>
 </ul>
-<a class="btn" href="Tampa-Vendor-Bench.xlsx" download>Download the workbook (.xlsx)</a>
+<p><a href="Tampa-Vendor-Bench.xlsx" download>Download the workbook (.xlsx)</a></p>
 </div></section>
 
 <footer><div class="wrap">Built September 2026. Local facts from <a href="https://hcfl.gov/businesses/hillsgovhub/contractor-licensing" target="_blank" rel="noopener">Hillsborough County contractor licensing</a>, <a href="https://www.bellafsm.com/handyman-requirements-in-florida/" target="_blank" rel="noopener">Florida handyman rules</a>, <a href="https://tampareia.com/" target="_blank" rel="noopener">Tampa REIA</a>, <a href="https://lula.life/services" target="_blank" rel="noopener">Lula</a>, <a href="https://www.homeyou.com/fl/handyman-tampa-costs" target="_blank" rel="noopener">Homeyou Tampa</a>, <a href="https://homeguide.com/costs/plumber-cost" target="_blank" rel="noopener">HomeGuide</a>. Not legal advice. Verify every license yourself.</div></footer>
